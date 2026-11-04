@@ -1,71 +1,120 @@
 # Disk Cleaner
 
-Disk Cleaner shows what fills your Mac's disk, so you can understand it and move only what you choose to the Trash, and lets an agent ask for a target amount of free space without being able to delete anything.
+See what fills your Mac, choose exactly what goes, and give your AI agent an honest answer about free space.
 
-**Honest limit: it never frees space on its own. No automatic cleanup is enabled, nothing is deleted permanently, and an agent's capacity request can truthfully answer "insufficient".**
+<p align="center">
+  <img src="assets/hero.png" alt="Disk Cleaner" width="860">
+</p>
 
-## Why Disk Cleaner
+<p align="center">
+  <a href="https://github.com/aikongen/disk-cleaner/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/aikongen/disk-cleaner/ci.yml?branch=main&label=CI&style=flat" alt="CI status"></a>
+  <a href="https://github.com/aikongen/disk-cleaner/releases"><img src="https://img.shields.io/github/v/release/aikongen/disk-cleaner?include_prereleases&label=release&style=flat&color=6941C6" alt="Latest release"></a>
+  <img src="https://img.shields.io/badge/macOS_14%2B_%C2%B7_Apple_silicon-1F1A33?style=flat&logo=apple&logoColor=white" alt="macOS 14 or later on Apple silicon">
+  <img src="https://img.shields.io/badge/Swift_6-6941C6?style=flat&logo=swift&logoColor=white" alt="Swift 6">
+</p>
 
-- **See what fills your disk.** Scan a folder you choose and read capacity and sizes side by side, with the scope and age of the scan stated.
-- **Browse without rescanning.** The saved scan stays on your Mac. Click through folders, use breadcrumbs and back, search, and sort by Size, Name or Modified.
-- **Honest numbers.** Estimates, file sizes and measured free-space changes are shown as different things, and unknown stays unknown.
-- **Agents can ask, not act.** An agent requests a target amount of available space through a command line tool and gets a job id and status. It cannot pass paths, commands or rules.
-- **Nothing moves without you.** You check exact items, review their paths, then confirm. Items go to the Trash, never straight to deletion.
+Most disk tools either draw you a chart or clean "junk" on their own terms. Disk Cleaner shows you what is really there, lets you choose exactly what goes, and tells an AI agent the truth too. It is a personal, local macOS app: your data stays on your Mac.
 
-Disk Cleaner is a personal, local macOS app. Data stays on your Mac.
+## What you get
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/screenshot-overview.png" alt="Overview: disk capacity beside the sizes of the scanned folder">
+      <br><b>See what fills your disk</b>
+      <br>Capacity and the sizes of the folder you scanned, side by side. Estimates, sizes and measured changes stay separate, and unknown stays unknown.
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/screenshot-browse.png" alt="Browse files: a folder opened from the saved scan, with one item checked">
+      <br><b>Find it without rescanning</b>
+      <br>The scan is kept. Click into folders, step back with breadcrumbs, search, and sort by Size, Name or Modified.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/screenshot-trash-review.png" alt="Review before moving to Trash: the exact paths that will move">
+      <br><b>Choose exactly, then check</b>
+      <br>Check the items you want and read their full paths first. Move to Trash moves those paths and nothing else, with an outcome for each.
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/screenshot-settings.png" alt="Settings: atmosphere, remember last scan and scan history">
+      <br><b>Keep it your way</b>
+      <br>A Teal or Violet atmosphere, remember the last scan, and keep 5, 10 or 30 scans.
+    </td>
+  </tr>
+</table>
+
+Screenshots show the built-in preview with example data.
+
+**It never deletes anything permanently and never cleans on its own. It moves exactly the items you chose to the Trash.**
+
+## For AI agents
+
+When an agent needs room to work, it asks for a target amount of available space through `disk-cleanerctl`, a same-user command line tool inside the app. It cannot pass paths, commands or rules.
+
+```sh
+cli="/path/to/Disk Cleaner.app/Contents/MacOS/disk-cleanerctl"
+"$cli" request 24000000000 'my-unique-request-key'   # ask for 24 GB available, get a job id
+"$cli" wait '<job-id>'                               # completed, insufficient, failed or interrupted
+```
+
+Today Disk Cleaner measures and reports. No cleanup category is enabled, so a request for more than is free answers `insufficient` rather than guessing. The [automation contract](docs/reference/automation-contract.md) lists every command, field and status.
 
 ## Install
 
-There is no installer or public release yet. You build Disk Cleaner from source on macOS 14 or later with Xcode 16 or later (Swift 6 toolchain). It has been built and tested only on Apple silicon with Xcode 27.
+There is no published release yet. Build from source on macOS 14 or later with Xcode 16 or later (Swift 6). It has been built and tested only on Apple silicon.
 
 ```sh
 git clone https://github.com/aikongen/disk-cleaner.git
 cd disk-cleaner
 swift build -c release
 swift test
+scripts/build-and-package.sh
 ```
 
-`swift test` runs the fixture tests in temporary folders. One opt-in test that moves a generated file into your real Trash stays skipped unless you set `DISK_CLEANER_RUN_REAL_TRASH_SMOKE=1`.
+`swift test` uses fixtures in temporary folders only. `scripts/build-and-package.sh` writes two apps to `artifacts/`: `Disk Cleaner.app`, with `disk-cleanerctl` inside, and `Disk Cleaner Preview.app`, example data only. Both are ad-hoc signed, not notarized, so macOS may ask you to confirm the first launch.
 
-To get double-clickable apps, run `scripts/build-and-package.sh`. It runs the tests, builds the release executables and writes two ad-hoc signed bundles to `artifacts/`: `Disk Cleaner.app` (normal, with `disk-cleanerctl` inside) and `Disk Cleaner Preview.app` (example data only). They are not notarized, so macOS may ask you to confirm the first launch.
+Once a release is published, download it with the GitHub CLI so macOS does not quarantine it:
 
-To work in Xcode, open `xcode/DiskCleanerHost/DiskCleanerHost.xcodeproj`. Its `DiskCleaner` scheme builds the app, the command line tool and the tests from the same `Sources/` and `Tests/` folders; the `DiskCleanerFunctionalPreview` scheme builds the example-data preview.
+```sh
+gh release download vX.Y.Z -R aikongen/disk-cleaner -p 'DiskCleaner-*'
+```
 
-### Try the example data first
+### Try it with example data first
 
-The preview never reads or moves your files. Start the built app in fixture mode with `--demo` or `DISK_CLEANER_DEMO=1`, and open one screen directly with `--scene <name>` or `DISK_CLEANER_SCENE`:
+The preview shows every screen with example data and cannot touch your disk. Open one screen directly with `--scene`:
 
 ```sh
 swift run DiskCleanerApp --demo --scene browse
-DISK_CLEANER_DEMO=1 DISK_CLEANER_SCENE=trash-review swift run DiskCleanerApp
-open -n "artifacts/Disk Cleaner Preview.app" --args --scene settings
+open -n "artifacts/Disk Cleaner Preview.app" --args --scene trash-review
 ```
 
-Scenes: `overview`, `browse`, `browse-tree`, `empty`, `scanning`, `settings`, `trash-review`, `trash-outcome`, `cleanup-result`. Figures such as "126 GB Documents" are example data. The tutorial [Open Disk Cleaner, scan a folder and review what to move](docs/tutorials/first-scan.md) walks through both modes.
+Scenes: `overview`, `browse`, `browse-tree`, `empty`, `scanning`, `settings`, `trash-review`, `trash-outcome`, `cleanup-result`.
 
 ## Use
 
-1. Open the normal app (without `--demo`) and choose a folder to scan. You can cancel a scan and keep the previous result.
-2. Read **Overview** for disk capacity beside the folder's recorded sizes.
+1. Open `Disk Cleaner.app` and choose a folder to scan. Cancel keeps your previous result.
+2. Read **Overview**: disk capacity beside the folder's recorded sizes.
 3. Open **Browse files**. Click a folder row to go inside, use the breadcrumbs or back to return, and search or sort.
-4. Select a row for details. Tick the checkbox to check items for Trash; the bar shows how many and how large.
-5. Press Review for Trash to see the exact paths. Nothing moves until you press Move to Trash. Cancel returns you to the same place.
-6. Read the outcome per item: moved, not moved with the reason, or unknown with the last known Trash location. Rescan to refresh.
+4. Tick the items you want, then press **Review for Trash** to read their exact paths. Cancel returns you to the same place with nothing moved.
+5. Press **Move to Trash** and read the outcome per item: moved, not moved with the reason, or unknown. Scan again to refresh the numbers.
 
-**Cleanups** lists past agent capacity requests and their outcomes. Settings (gear or Command-comma) lets you choose Teal or Violet, remember the last scan, and keep 5, 10 or 30 scans.
+**Cleanups** lists past agent requests and their outcomes. Settings opens with the gear or Command-comma.
 
-Limits to know: Move to Trash does not free space by itself until the Trash is emptied; Finder's Put Back is not promised; the app has not yet been run against the real Trash from its own process; and if another process of yours swaps a file in the same instant, the move can act on the swapped file (accepted tradeoff).
-
-## Automation
-
-`disk-cleanerctl` is a same-user command line tool inside the normal app. `request` takes a target of available bytes and a key, returns a job id, and `status` or `wait` report the result. It is asynchronous and polling-based. A finished job can say `insufficient`. See the [automation contract](docs/reference/automation-contract.md).
+Good to know: space returns only when you empty the Trash, and Finder's Put Back is not promised. The [tutorial](docs/tutorials/first-scan.md) covers the remaining limits and where your data lives.
 
 ## Documentation
 
-- [Documentation index](docs/README.md)
 - [Open Disk Cleaner, scan a folder and review what to move](docs/tutorials/first-scan.md)
 - [Automation contract](docs/reference/automation-contract.md)
+- [Documentation index](docs/README.md)
+- [Changelog](CHANGELOG.md)
 
 ## Contribute / Maintain
 
-Build, test, fixture isolation and evidence conventions are in the [maintainer guide](docs/maintainer-guide.md). Working rules for contributors and agents are in [AGENTS.md](AGENTS.md).
+Build, test and pull request rules are in [CONTRIBUTING.md](CONTRIBUTING.md); fixture isolation, the Xcode project and evidence conventions are in the [maintainer guide](docs/maintainer-guide.md).
+Working rules for contributors and agents are in [AGENTS.md](AGENTS.md), and security reports go through [SECURITY.md](SECURITY.md).
+
+<p align="center">
+  <a href="https://github.com/aikongen"><img src="assets/made-with-love-aikongen.svg" alt="Made with love by Aikongen" height="40"></a>
+</p>
