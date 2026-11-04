@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		A1C0DE0000000000000000B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C0DE0000000000000000A1 /* Assets.xcassets */; };
 		A1C0DE0000000000000000B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C0DE0000000000000000A1 /* Assets.xcassets */; };
+		A1C0DE00000000000000AC12 /* made-with-love-aikongen-dark.svg in Resources */ = {isa = PBXBuildFile; fileRef = A1C0DE00000000000000AC02 /* made-with-love-aikongen-dark.svg */; };
+		A1C0DE00000000000000AC22 /* made-with-love-aikongen-dark.svg in Resources */ = {isa = PBXBuildFile; fileRef = A1C0DE00000000000000AC02 /* made-with-love-aikongen-dark.svg */; };
+		A1C0DE00000000000000AC13 /* AboutIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C0DE00000000000000AC03 /* AboutIcon.png */; };
+		A1C0DE00000000000000AC23 /* AboutIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C0DE00000000000000AC03 /* AboutIcon.png */; };
+		A1C0DE00000000000000AC11 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = A1C0DE00000000000000AC01 /* CHANGELOG.md */; };
+		A1C0DE00000000000000AC21 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = A1C0DE00000000000000AC01 /* CHANGELOG.md */; };
 		EF5314D05739AD0BEFF0A1EA /* MotionFramesSettingsExitTab4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F251EB5722D56CC453779 /* MotionFramesSettingsExitTab4.swift */; };
 		636DAE0C2B9D9275C83568F0 /* MotionFramesSettingsExitTab4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F251EB5722D56CC453779 /* MotionFramesSettingsExitTab4.swift */; };
 		A9FADC661C28F0F014BCEC16 /* MotionFramesSettingsExitTab3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2722D963744474E4B9D4D5A /* MotionFramesSettingsExitTab3.swift */; };
@@ -188,7 +194,11 @@
 		5FAECB0E94D2A06B10FB844A /* Comparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30DD7DC9257D6263907F4F /* Comparison.swift */; };
 		63454E024B0E3B9C152C0036 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72790DD5BA108B54A07F45CF /* Inventory.swift */; };
 		63477D55E13905E5873A52EB /* DiskCleanerAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25E20EAC4CDF8806447B808 /* DiskCleanerAppearance.swift */; };
+		A1C0DE00000000000000AB12 /* AboutWhatsNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0DE00000000000000AB02 /* AboutWhatsNew.swift */; };
+		A1C0DE00000000000000AB11 /* AboutPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0DE00000000000000AB01 /* AboutPanel.swift */; };
 		657170EC1E5B899AC16D0900 /* DiskCleanerAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25E20EAC4CDF8806447B808 /* DiskCleanerAppearance.swift */; };
+		A1C0DE00000000000000AB22 /* AboutWhatsNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0DE00000000000000AB02 /* AboutWhatsNew.swift */; };
+		A1C0DE00000000000000AB21 /* AboutPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0DE00000000000000AB01 /* AboutPanel.swift */; };
 		64D28C9E2EE1ABC45BF1AB72 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBA4961D35EBAD1B0CE92D6 /* CoreTests.swift */; };
 		70574A515DA2202C611E445A /* DiskCleanerCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 185A8156C61409C0F51D893B /* DiskCleanerCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DCF0CD9C8527CCA1EC12B66C /* DiskCleanerCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 185A8156C61409C0F51D893B /* DiskCleanerCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -263,6 +273,9 @@
 
 /* Begin PBXFileReference section */
 		A1C0DE0000000000000000A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		A1C0DE00000000000000AC02 /* made-with-love-aikongen-dark.svg */ = {isa = PBXFileReference; lastKnownFileType = text; name = made-with-love-aikongen-dark.svg; path = ../../assets/made-with-love-aikongen-dark.svg; sourceTree = SOURCE_ROOT; };
+		A1C0DE00000000000000AC03 /* AboutIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AboutIcon.png; path = ../../assets/icon/icon-1024.png; sourceTree = SOURCE_ROOT; };
+		A1C0DE00000000000000AC01 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../../CHANGELOG.md; sourceTree = SOURCE_ROOT; };
 		216F251EB5722D56CC453779 /* MotionFramesSettingsExitTab4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesSettingsExitTab4.swift"; sourceTree = "<group>"; };
 		D2722D963744474E4B9D4D5A /* MotionFramesSettingsExitTab3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesSettingsExitTab3.swift"; sourceTree = "<group>"; };
 		4B0F3AC9C05BBB68AE9A353C /* MotionFramesSettingsExitTab2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesSettingsExitTab2.swift"; sourceTree = "<group>"; };
@@ -369,6 +382,8 @@
 		CCBA4961D35EBAD1B0CE92D6 /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		E023763F09D1C832E2FF5AF0 /* disk-cleanerctl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "disk-cleanerctl"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25E20EAC4CDF8806447B808 /* DiskCleanerAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCleanerAppearance.swift; sourceTree = "<group>"; };
+		A1C0DE00000000000000AB02 /* AboutWhatsNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutWhatsNew.swift; sourceTree = "<group>"; };
+		A1C0DE00000000000000AB01 /* AboutPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPanel.swift; sourceTree = "<group>"; };
 		FA30DD7DC9257D6263907F4F /* Comparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparison.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -431,6 +446,9 @@
 			isa = PBXGroup;
 			children = (
 				A1C0DE0000000000000000A1 /* Assets.xcassets */,
+				A1C0DE00000000000000AC02 /* made-with-love-aikongen-dark.svg */,
+				A1C0DE00000000000000AC03 /* AboutIcon.png */,
+				A1C0DE00000000000000AC01 /* CHANGELOG.md */,
 				0A3E27B8CA818264D75C8D81 /* Products */,
 				3152FA71F4DA052D4F267FBF /* DiskCleanerCore */,
 				68D66C1CD2D644A5E6D20237 /* DiskCleanerApp */,
@@ -553,6 +571,8 @@
 				9A4603D9309B5A1D00604408 /* DiskCleanerApp-Info.plist */,
 				91D1A55A7DF1FACD56D51E2B /* DiskCleanerApp.swift */,
 				E25E20EAC4CDF8806447B808 /* DiskCleanerAppearance.swift */,
+				A1C0DE00000000000000AB02 /* AboutWhatsNew.swift */,
+				A1C0DE00000000000000AB01 /* AboutPanel.swift */,
 			);
 			name = DiskCleanerApp;
 			path = "../../Sources/DiskCleanerApp";
@@ -701,6 +721,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C0DE0000000000000000B1 /* Assets.xcassets in Resources */,
+				A1C0DE00000000000000AC12 /* made-with-love-aikongen-dark.svg in Resources */,
+				A1C0DE00000000000000AC13 /* AboutIcon.png in Resources */,
+				A1C0DE00000000000000AC11 /* CHANGELOG.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,6 +732,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C0DE0000000000000000B2 /* Assets.xcassets in Resources */,
+				A1C0DE00000000000000AC22 /* made-with-love-aikongen-dark.svg in Resources */,
+				A1C0DE00000000000000AC23 /* AboutIcon.png in Resources */,
+				A1C0DE00000000000000AC21 /* CHANGELOG.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,6 +845,8 @@
 				7C7AB0119D609E019A89C655 /* CleanerModel.swift in Sources */,
 				F4A91EBA5369B0ED860EC94A /* DiskCleanerApp.swift in Sources */,
 				63477D55E13905E5873A52EB /* DiskCleanerAppearance.swift in Sources */,
+				A1C0DE00000000000000AB12 /* AboutWhatsNew.swift in Sources */,
+				A1C0DE00000000000000AB11 /* AboutPanel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -909,6 +937,8 @@
 				415690829BDF7589FFBFE549 /* CleanerModel.swift in Sources */,
 				08FB2CD633E40EF9B75E0A2F /* DiskCleanerApp.swift in Sources */,
 				657170EC1E5B899AC16D0900 /* DiskCleanerAppearance.swift in Sources */,
+				A1C0DE00000000000000AB22 /* AboutWhatsNew.swift in Sources */,
+				A1C0DE00000000000000AB21 /* AboutPanel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

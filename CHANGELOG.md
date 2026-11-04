@@ -4,6 +4,7 @@ This file records user-visible changes. The format follows [Keep a Changelog](ht
 
 ## Unreleased
 
+- Added an About panel from the app menu: icon with a one-time lift, version, what's new, and links to releases, source, problems and the licence.
 - Releases include a drag-to-install `.dmg` beside the zip.
 - README rewritten for people who download the app; build instructions moved to the maintainer guide.
 - Polished the first-run pages and Settings: one top-anchored 640 pt layout, free space shown on Overview, a "How an agent asks" Help link on Cleanups, and Settings without a back chevron.

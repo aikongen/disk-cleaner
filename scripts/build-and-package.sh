@@ -62,6 +62,10 @@ package_app() {
   install -m 755 "$BIN_DIR/DiskCleanerApp" "$app_dir/Contents/MacOS/DiskCleanerApp"
   install -m 755 "$BIN_DIR/disk-cleanerctl" "$app_dir/Contents/MacOS/disk-cleanerctl"
   install -m 644 "$PACKAGE_ROOT/assets/icon/DiskCleaner.icns" "$app_dir/Contents/Resources/DiskCleaner.icns"
+  # About panel resources: the What's new source and the dark-pinned made-with-love mark.
+  install -m 644 "$PACKAGE_ROOT/CHANGELOG.md" "$app_dir/Contents/Resources/CHANGELOG.md"
+  install -m 644 "$PACKAGE_ROOT/assets/made-with-love-aikongen-dark.svg" "$app_dir/Contents/Resources/made-with-love-aikongen-dark.svg"
+  install -m 644 "$PACKAGE_ROOT/assets/icon/icon-1024.png" "$app_dir/Contents/Resources/AboutIcon.png"
   printf 'APPL????' > "$app_dir/Contents/PkgInfo"
 
   demo_keys=""
