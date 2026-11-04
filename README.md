@@ -7,10 +7,8 @@ See what fills your Mac, choose exactly what goes, and give your AI agent an hon
 </p>
 
 <p align="center">
-  <a href="https://github.com/aikongen/disk-cleaner/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/aikongen/disk-cleaner/ci.yml?branch=main&label=CI&style=flat" alt="CI status"></a>
   <a href="https://github.com/aikongen/disk-cleaner/releases"><img src="https://img.shields.io/github/v/release/aikongen/disk-cleaner?include_prereleases&label=release&style=flat&color=6941C6" alt="Latest release"></a>
   <img src="https://img.shields.io/badge/macOS_14%2B_%C2%B7_Apple_silicon-1F1A33?style=flat&logo=apple&logoColor=white" alt="macOS 14 or later on Apple silicon">
-  <img src="https://img.shields.io/badge/Swift_6-6941C6?style=flat&logo=swift&logoColor=white" alt="Swift 6">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-7F56D9?style=flat" alt="MIT license"></a>
 </p>
 
@@ -50,72 +48,35 @@ Screenshots show the built-in preview with example data.
 
 **It never deletes anything permanently and never cleans on its own. It moves exactly the items you chose to the Trash.**
 
+## Get it
+
+1. Download the latest `DiskCleaner-vX.Y.Z.zip` from the [releases page](https://github.com/aikongen/disk-cleaner/releases).
+2. Unzip it and move `Disk Cleaner.app` to your Applications folder. The zip also holds `Disk Cleaner Preview.app`, which shows every screen with example data and cannot touch your disk.
+3. The app is ad-hoc signed and not notarized, so macOS blocks the first open. Right-click the app and choose **Open**, then confirm. Or open **System Settings > Privacy & Security** and choose **Open Anyway**.
+
+Needs macOS 14 or later. It has been built and tested only on Apple silicon.
+
+## Use it
+
+1. Open the app and choose a folder to scan. Cancel keeps your previous result.
+2. **Overview** shows disk capacity beside the folder's recorded sizes.
+3. **Browse files** lets you click into folders, search, sort, and tick the items you want.
+4. **Review for Trash** shows their exact paths. **Move to Trash** moves those and nothing else, with an outcome for each.
+5. **Cleanups** lists past agent requests and their outcomes. Settings opens with the gear or Command-comma.
+
+Space returns only when you empty the Trash, and Finder's Put Back is not promised. The [first scan tutorial](docs/tutorials/first-scan.md) walks through it and covers the remaining limits.
+
 ## For AI agents
 
-When an agent needs room to work, it asks for a target amount of available space through `disk-cleanerctl`, a same-user command line tool inside the app. It cannot pass paths, commands or rules.
-
-```sh
-cli="/path/to/Disk Cleaner.app/Contents/MacOS/disk-cleanerctl"
-"$cli" request 24000000000 'my-unique-request-key'   # ask for 24 GB available, get a job id
-"$cli" wait '<job-id>'                               # completed, insufficient, failed or interrupted
-```
-
-Today Disk Cleaner measures and reports. No cleanup category is enabled, so a request for more than is free answers `insufficient` rather than guessing. The [automation contract](docs/reference/automation-contract.md) lists every command, field and status.
-
-## Install
-
-There is no published release yet. Build from source on macOS 14 or later with Xcode 16 or later (Swift 6). It has been built and tested only on Apple silicon.
-
-```sh
-git clone https://github.com/aikongen/disk-cleaner.git
-cd disk-cleaner
-swift build -c release
-swift test
-scripts/build-and-package.sh
-```
-
-`swift test` uses fixtures in temporary folders only. `scripts/build-and-package.sh` writes two apps to `artifacts/`: `Disk Cleaner.app`, with `disk-cleanerctl` inside, and `Disk Cleaner Preview.app`, example data only. Both are ad-hoc signed, not notarized, so macOS may ask you to confirm the first launch.
-
-Once a release is published, download it with the GitHub CLI so macOS does not quarantine it:
-
-```sh
-gh release download vX.Y.Z -R aikongen/disk-cleaner -p 'DiskCleaner-*'
-```
-
-### Try it with example data first
-
-The preview shows every screen with example data and cannot touch your disk. Open one screen directly with `--scene`:
-
-```sh
-swift run DiskCleanerApp --demo --scene browse
-open -n "artifacts/Disk Cleaner Preview.app" --args --scene trash-review
-```
-
-Scenes: `overview`, `browse`, `browse-tree`, `empty`, `scanning`, `settings`, `trash-review`, `trash-outcome`, `cleanup-result`.
-
-## Use
-
-1. Open `Disk Cleaner.app` and choose a folder to scan. Cancel keeps your previous result.
-2. Read **Overview**: disk capacity beside the folder's recorded sizes.
-3. Open **Browse files**. Click a folder row to go inside, use the breadcrumbs or back to return, and search or sort.
-4. Tick the items you want, then press **Review for Trash** to read their exact paths. Cancel returns you to the same place with nothing moved.
-5. Press **Move to Trash** and read the outcome per item: moved, not moved with the reason, or unknown. Scan again to refresh the numbers.
-
-**Cleanups** lists past agent requests and their outcomes. Settings opens with the gear or Command-comma.
-
-Good to know: space returns only when you empty the Trash, and Finder's Put Back is not promised. The [tutorial](docs/tutorials/first-scan.md) covers the remaining limits and where your data lives.
+An agent asks for a target amount of available space through a same-user command line tool inside the app. It cannot pass paths, commands or rules. No cleanup category is enabled yet, so a request for more than is free answers `insufficient` rather than guessing. The [automation contract](docs/reference/automation-contract.md) lists every command, field and status.
 
 ## Documentation
 
-- [Open Disk Cleaner, scan a folder and review what to move](docs/tutorials/first-scan.md)
-- [Automation contract](docs/reference/automation-contract.md)
-- [Documentation index](docs/README.md)
-- [Changelog](CHANGELOG.md)
+See the [documentation index](docs/README.md). Changes are in the [changelog](CHANGELOG.md); security reports go through [SECURITY.md](SECURITY.md). Disk Cleaner is released under the [MIT License](LICENSE).
 
-## Contribute / Maintain
+## Maintainers and contributors
 
-Build, test and pull request rules are in [CONTRIBUTING.md](CONTRIBUTING.md); fixture isolation, the Xcode project and evidence conventions are in the [maintainer guide](docs/maintainer-guide.md).
-Working rules for contributors and agents are in [AGENTS.md](AGENTS.md), and security reports go through [SECURITY.md](SECURITY.md). Disk Cleaner is released under the [MIT License](LICENSE).
+Building from source, tests and pull requests: [maintainer guide](docs/maintainer-guide.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
 
 <p align="center">
   <a href="https://github.com/aikongen"><img src="assets/made-with-love-aikongen.svg" alt="Made with love by Aikongen" height="40"></a>

@@ -4,6 +4,8 @@ This file records user-visible changes. The format follows [Keep a Changelog](ht
 
 ## Unreleased
 
+- README rewritten for people who download the app; build instructions moved to the maintainer guide.
+
 ## 0.1.0 - 2026-11-04
 
 ### Added

@@ -8,14 +8,14 @@ Use this page to open the app, see what fills a folder, and, if you choose, move
 
 ## Before you start
 
-- macOS 14 or later on an Apple silicon Mac, with the apps built from source as described under Install in the [README](../README.md). `scripts/build-and-package.sh` writes both apps to `artifacts/`.
+- macOS 14 or later on an Apple silicon Mac, with the release zip downloaded and unzipped as described under Get it in the [README](../README.md). It holds both apps.
 - The apps are ad-hoc signed development builds, not notarized. macOS may ask you to confirm the first launch.
 - The **preview** (`Disk Cleaner Preview.app`, or the app started with `--demo`) shows example data and can never move a file. The **normal app** (`Disk Cleaner.app`) scans a folder you choose and can move checked items to the Trash.
 
 ## Try the preview first
 
 1. Open `Disk Cleaner Preview.app`. Its footer says it shows example data with no disk actions. Figures such as "126 GB Documents" are examples.
-2. To open one screen directly, quit it and start it with a scene: `open -n "artifacts/Disk Cleaner Preview.app" --args --scene trash-review`. Setting `DISK_CLEANER_SCENE` does the same from a shell. Without the bundle, `swift run DiskCleanerApp --demo --scene trash-review` opens the same screen.
+2. To open one screen directly, quit it and start it with a scene: `open -n "Disk Cleaner Preview.app" --args --scene trash-review`. Setting `DISK_CLEANER_SCENE` does the same from a shell.
 3. Scenes: `overview`, `browse`, `browse-tree`, `empty`, `scanning`, `settings`, `trash-review`, `trash-outcome`, `cleanup-result`.
 
 ## Scan and browse

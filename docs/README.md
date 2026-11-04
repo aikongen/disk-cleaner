@@ -25,4 +25,4 @@ For the person using Disk Cleaner on their own Mac, for an agent calling its com
 
 ## Maintainer
 
-- [Maintainer guide](maintainer-guide.md) covers build, test, fixture isolation and evidence conventions.
+- [Maintainer guide](maintainer-guide.md) covers getting the source, build, test, the example-data preview, fixture isolation and evidence conventions.

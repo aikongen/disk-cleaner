@@ -6,6 +6,36 @@ audience: maintainer
 
 Use this page when you change Disk Cleaner's source: how to build and test it, how to keep tests away from personal data, and what counts as evidence for a claim. Working rules for people and agents are in [AGENTS.md](../AGENTS.md).
 
+## Get the source and build
+
+```sh
+git clone https://github.com/aikongen/disk-cleaner.git
+cd disk-cleaner
+```
+
+Building needs macOS 14 or later and Xcode 16 or later (Swift 6). It has been built and tested only on Apple silicon. Run `swift build -c release`, `swift test` and `scripts/build-and-package.sh` as listed below. `swift test` uses fixtures in temporary folders only. `scripts/build-and-package.sh` writes two apps to `artifacts/`: `Disk Cleaner.app`, with `disk-cleanerctl` inside, and `Disk Cleaner Preview.app`, example data only. Both are ad-hoc signed, not notarized, so macOS may ask for confirmation on first launch. A download with the GitHub CLI avoids quarantine: `gh release download vX.Y.Z -R aikongen/disk-cleaner -p 'DiskCleaner-*'` (see [Publish a release](how-to/release.md)).
+
+## Preview with example data
+
+The preview shows every screen with example data and cannot touch your disk. Open one screen directly with `--scene`:
+
+```sh
+swift run DiskCleanerApp --demo --scene browse
+open -n "artifacts/Disk Cleaner Preview.app" --args --scene trash-review
+```
+
+Scenes: `overview`, `browse`, `browse-tree`, `empty`, `scanning`, `settings`, `trash-review`, `trash-outcome`, `cleanup-result`.
+
+## Run the command line tool
+
+```sh
+cli="/path/to/Disk Cleaner.app/Contents/MacOS/disk-cleanerctl"
+"$cli" request 24000000000 'my-unique-request-key'   # ask for 24 GB available, get a job id
+"$cli" wait '<job-id>'                               # completed, insufficient, failed or interrupted
+```
+
+Every command, field and status is in the [automation contract](reference/automation-contract.md).
+
 ## Build and test
 
 The Swift package in `Package.swift` is the module definition: `DiskCleanerCore`, the `DiskCleanerApp` executable, the `disk-cleanerctl` executable and the `DiskCleanerCoreTests` test target, with macOS 14 as the minimum.
