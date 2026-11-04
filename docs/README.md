@@ -17,7 +17,7 @@ For the person using Disk Cleaner on their own Mac, for an agent calling its com
 ## Explanation
 
 - [Architecture and quality path](explanation/architecture-and-readiness.md) says how the parts fit and what must improve next (maintainer).
-- [Appearance](explanation/appearance.md) covers the two window atmospheres and the colour rules (maintainer).
+- [Appearance](explanation/appearance.md) covers the window atmosphere and the colour rules (maintainer).
 
 ## Reference
 

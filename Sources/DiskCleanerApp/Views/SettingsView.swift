@@ -15,11 +15,6 @@ struct SettingsPage: View {
                 Text("Settings").font(.system(size: 20, weight: .semibold))
             }
             VStack(spacing: 0) {
-                SettingRow(title: "Appearance") {
-                    Picker("Appearance", selection: preference(\.appearance)) {
-                        Text("Teal").tag(AppearancePreference.green); Text("Violet").tag(AppearancePreference.purple)
-                    }.pickerStyle(.segmented).labelsHidden().frame(width: 130)
-                }
                 SettingRow(title: "Remember last scan", caption: "Keeps the most recent scan available after quitting") {
                     Toggle("Remember last scan", isOn: preference(\.rememberLastScan)).toggleStyle(.switch).labelsHidden().tint(.gray)
                 }

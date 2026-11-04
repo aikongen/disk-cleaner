@@ -25,7 +25,7 @@ Report the actual test output. No new test suite is required for a reversible wo
 
 ## UI rules
 
-Keep Overview, Browse files and Cleanups; dark layered native materials; distinct data hues; no purple or violet for controls or highlights; a neutral outlined cleanup button, disabled until a cleanup is supported. Show estimates, file sizes and measured available-capacity changes as different things. Whole-row disclosure targets are at least 28 pt tall with a pointing cursor. Preserve page, selection and scroll context. Measurements and bars update directly; motion explains navigation, selection or disclosure and must handle reversal.
+Keep Overview, Browse files and Cleanups; dark layered native materials; distinct data hues; no purple or violet for controls or highlights; a neutral outlined cleanup button, disabled until a cleanup is supported; one violet atmosphere, no appearance setting. Show estimates, file sizes and measured available-capacity changes as different things. Whole-row disclosure targets are at least 28 pt tall with a pointing cursor. Preserve page, selection and scroll context. Measurements and bars update directly; motion explains navigation, selection or disclosure and must handle reversal.
 
 Before a new screen or visual change, make a throwaway appearance-only prototype and agree it before building. Keep every prototype and native version beside the earlier ones instead of overwriting them.
 

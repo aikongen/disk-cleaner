@@ -37,9 +37,9 @@ Most disk tools either draw you a chart or clean "junk" on their own terms. Disk
       <br>Check the items you want and read their full paths first. Move to Trash moves those paths and nothing else, with an outcome for each.
     </td>
     <td width="50%" valign="top">
-      <img src="assets/screenshot-settings.png" alt="Settings: atmosphere, remember last scan and scan history">
+      <img src="assets/screenshot-settings.png" alt="Settings: remember last scan and scan history">
       <br><b>Keep it your way</b>
-      <br>A Teal or Violet atmosphere, remember the last scan, and keep 5, 10 or 30 scans.
+      <br>Remember the last scan, and keep 5, 10 or 30 scans.
     </td>
   </tr>
 </table>

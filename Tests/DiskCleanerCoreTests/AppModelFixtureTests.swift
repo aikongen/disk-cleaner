@@ -122,20 +122,17 @@ private func waitFor(_ condition: @MainActor () -> Bool) async {
     await model.waitUntilLoaded()
     #expect(model.settingsLoaded)
     #expect(model.preferences == CleanerModel.firstLaunchPreferences)
-    #expect(model.preferences.appearance == .purple)
     #expect(model.scanControlsDisabledReason == nil)
     #expect(!model.hasSnapshot)
 
-    model.setPreference(\.appearance, to: .green)
     model.setPreference(\.rememberLastScan, to: false)
     model.setPreference(\.retention, to: .five)
     await model.waitUntilLoaded()
     let stored = try await PreferencesStore(directory: folder).load(defaults: CleanerModel.firstLaunchPreferences)
-    #expect(stored == UserPreferences(appearance: .green, rememberLastScan: false, retention: .five))
+    #expect(stored == UserPreferences(rememberLastScan: false, retention: .five))
 
     let reopened = CleanerModel(isFixture: false, storageDirectory: folder, trashFlow: FixtureTrashFlow())
     await reopened.waitUntilLoaded()
-    #expect(reopened.preferences.appearance == .green)
     #expect(reopened.preferences.retention == .five)
 }
 
@@ -224,7 +221,6 @@ private struct RefusingRecordingBackend: TrashBackend {
     #expect(model.root?.path == FixtureData.root)
     #expect(model.storageDirectory.path.hasPrefix(FileManager.default.temporaryDirectory.path))
     #expect(!FileManager.default.fileExists(atPath: model.storageDirectory.path))
-    #expect(model.preferences.appearance == .purple)
 }
 
 @MainActor @Test func everyFixtureSceneLoads() throws {
@@ -282,8 +278,8 @@ private struct RefusingRecordingBackend: TrashBackend {
     let path = model.currentPath, selected = model.selectedItem, checks = model.checkedPaths, count = model.navigationCount
     model.openSettingsPage()
     #expect(model.settingsOpen)
-    model.setPreference(\.appearance, to: .green)
-    #expect(model.preferences.appearance == .green)
+    model.setPreference(\.rememberLastScan, to: false)
+    #expect(!model.preferences.rememberLastScan)
     model.closeSettingsPage()
     #expect(!model.settingsOpen)
     #expect(model.screen == .browse && model.currentPath == path && model.selectedItem == selected && model.checkedPaths == checks)

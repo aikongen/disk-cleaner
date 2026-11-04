@@ -1,13 +1,11 @@
 import Foundation
 
-public enum AppearancePreference: String, Codable, Sendable, CaseIterable { case green, purple }
 public enum SnapshotRetention: Int, Codable, Sendable, CaseIterable { case five = 5, ten = 10, thirty = 30 }
 public struct UserPreferences: Codable, Sendable, Equatable {
-    public var appearance: AppearancePreference
     public var rememberLastScan: Bool
     public var retention: SnapshotRetention
-    public init(appearance: AppearancePreference = .green, rememberLastScan: Bool = true, retention: SnapshotRetention = .thirty) {
-        self.appearance = appearance; self.rememberLastScan = rememberLastScan; self.retention = retention
+    public init(rememberLastScan: Bool = true, retention: SnapshotRetention = .thirty) {
+        self.rememberLastScan = rememberLastScan; self.retention = retention
     }
 }
 private struct PreferencesLedger: Codable { var version = 1; var preferences = UserPreferences() }

@@ -35,20 +35,26 @@ private func functionalDirectory() throws -> URL {
     try FileManager.default.createDirectory(at: root, withIntermediateDirectories: true)
     return URL(fileURLWithPath: try FileIdentityReader.canonicalDirectoryPath(root.path))
 }
-@Test func firstLaunchAppearanceSeedAndExplicitSavedChoiceRemainSeparate() async throws {
+@Test func firstLaunchSeedAndExplicitSavedChoiceRemainSeparate() async throws {
     let root = try functionalDirectory(); defer { try? FileManager.default.removeItem(at: root) }
     let store = PreferencesStore(directory: root)
     #expect(try await store.load() == UserPreferences())
     #expect(SnapshotRetention.allCases.map(\.rawValue) == [5, 10, 30])
-    #expect(try await store.load(defaults: UserPreferences(appearance: .purple)).appearance == .purple)
+    #expect(try await store.load(defaults: UserPreferences(retention: .ten)).retention == .ten)
     #expect(!FileManager.default.fileExists(atPath: root.appendingPathComponent("preferences.json").path))
-    let chosen = UserPreferences(appearance: .green, rememberLastScan: false, retention: .five)
+    let chosen = UserPreferences(rememberLastScan: false, retention: .five)
     try await store.save(chosen)
-    #expect(try await PreferencesStore(directory: root).load(defaults: UserPreferences(appearance: .purple)) == chosen)
+    #expect(try await PreferencesStore(directory: root).load(defaults: UserPreferences(retention: .ten)) == chosen)
     let future = Data("{\"version\":99,\"preferences\":{\"appearance\":\"green\",\"rememberLastScan\":true,\"retention\":30}}".utf8)
     try future.write(to: root.appendingPathComponent("preferences.json"))
     do { try await store.save(chosen); Issue.record("unsupported settings overwritten") } catch PreferencesError.unsupportedVersion { }
     #expect(try Data(contentsOf: root.appendingPathComponent("preferences.json")) == future)
+}
+@Test func storedLegacyAppearanceValueIsIgnoredSilently() async throws {
+    let root = try functionalDirectory(); defer { try? FileManager.default.removeItem(at: root) }
+    let legacy = Data("{\"version\":1,\"preferences\":{\"appearance\":\"green\",\"rememberLastScan\":false,\"retention\":10}}".utf8)
+    try legacy.write(to: root.appendingPathComponent("preferences.json"))
+    #expect(try await PreferencesStore(directory: root).load() == UserPreferences(rememberLastScan: false, retention: .ten))
 }
 @Test func selectedRetentionPrunesOnlyStoredObservations() async throws {
     let root = try functionalDirectory(); defer { try? FileManager.default.removeItem(at: root) }

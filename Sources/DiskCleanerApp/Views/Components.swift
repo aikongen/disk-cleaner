@@ -27,8 +27,6 @@ enum CleanerMotion {
     static let bannerOut = Animation.easeOut(duration: 0.10)
     /// Release of press feedback; pressing itself stays instant.
     static let release = Animation.easeOut(duration: 0.12)
-    /// Teal and Violet ground crossfade after a Settings change.
-    static let appearance = Animation.easeOut(duration: 0.24)
     /// Rows arriving after a folder change travel 10 pt; leaving rows drift 6 pt the same way.
     static let arriveTravel: CGFloat = 10
     static let leaveTravel: CGFloat = 6
@@ -156,45 +154,27 @@ struct FractionalHeight: Layout {
     }
 }
 
-private struct VioletAppearanceKey: EnvironmentKey { static let defaultValue = false }
-extension EnvironmentValues {
-    var violetAppearance: Bool { get { self[VioletAppearanceKey.self] } set { self[VioletAppearanceKey.self] = newValue } }
-}
-
 struct WindowAtmosphere: View {
-    @Environment(\.violetAppearance) private var violet
     var body: some View {
-        // The teal ground is always drawn and opaque; the violet ground fades over it. Either
-        // direction is one layer's opacity, so the window never dips toward black mid-change.
-        ZStack {
+        GeometryReader { geometry in
+            let radius = max(geometry.size.width, geometry.size.height)
             ZStack {
-                LinearGradient(colors: [DiskCleanerAppearance.greenTop, Paint.background], startPoint: .topLeading, endPoint: .bottomTrailing)
-                RadialGradient(colors: [DiskCleanerAppearance.greenGlow1.opacity(0.48), .clear], center: .topLeading, startRadius: 0, endRadius: 850)
-                RadialGradient(colors: [DiskCleanerAppearance.greenGlow2.opacity(0.38), .clear], center: .trailing, startRadius: 0, endRadius: 750)
+                DiskCleanerAppearance.violetGround
+                RadialGradient(colors: [DiskCleanerAppearance.violetGlow1.opacity(0.26), .clear], center: UnitPoint(x: 0.56, y: 0.48), startRadius: 0, endRadius: radius * 0.48)
+                RadialGradient(colors: [DiskCleanerAppearance.violetGlow2.opacity(0.30), .clear], center: UnitPoint(x: 0.72, y: 0.80), startRadius: 0, endRadius: radius * 0.50)
             }
-            GeometryReader { geometry in
-                let radius = max(geometry.size.width, geometry.size.height)
-                ZStack {
-                    DiskCleanerAppearance.violetGround
-                    RadialGradient(colors: [DiskCleanerAppearance.violetGlow1.opacity(0.26), .clear], center: UnitPoint(x: 0.56, y: 0.48), startRadius: 0, endRadius: radius * 0.48)
-                    RadialGradient(colors: [DiskCleanerAppearance.violetGlow2.opacity(0.30), .clear], center: UnitPoint(x: 0.72, y: 0.80), startRadius: 0, endRadius: radius * 0.50)
-                }
-            }
-            .opacity(violet ? 1 : 0)
         }
-        .animation(CleanerMotion.appearance, value: violet)
         .ignoresSafeArea()
     }
 }
 
 struct PanelSurface: View {
-    @Environment(\.violetAppearance) private var violet
     var raised = false
     var radius: CGFloat = 11
     var body: some View {
         RoundedRectangle(cornerRadius: radius, style: .continuous)
             .fill(.regularMaterial)
-            .overlay { RoundedRectangle(cornerRadius: radius, style: .continuous).fill(.black.opacity(violet ? (raised ? 0.30 : 0.24) : 0)).animation(CleanerMotion.appearance, value: violet) }
+            .overlay { RoundedRectangle(cornerRadius: radius, style: .continuous).fill(.black.opacity(raised ? 0.30 : 0.24)) }
             .overlay {
                 RoundedRectangle(cornerRadius: radius, style: .continuous)
                     .fill(LinearGradient(colors: [.white.opacity(raised ? 0.16 : 0.08), .white.opacity(raised ? 0.07 : 0.04)], startPoint: .topLeading, endPoint: .bottomTrailing))

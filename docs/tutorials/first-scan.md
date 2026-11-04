@@ -38,7 +38,7 @@ Moving to the Trash does not free space until you empty it. Finder's Put Back is
 
 ## Settings
 
-Open Settings with the gear or Command-comma; it is a page in the same window, and Back or Esc returns. Choose Teal or Violet, whether to remember the last scan, and how many scans to keep: 5, 10 or 30.
+Open Settings with the gear or Command-comma; it is a page in the same window, and Back or Esc returns. Choose whether to remember the last scan, and how many scans to keep: 5, 10 or 30.
 
 ## Cleanups
 

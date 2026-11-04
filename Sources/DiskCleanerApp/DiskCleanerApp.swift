@@ -74,8 +74,7 @@ struct CleanerWindow: View {
         .animation(CleanerMotion.layout(CleanerMotion.disclosure, reduceMotion: reduceMotion), value: model.notice)
         // Figures and labels change their text directly; only position and opacity move.
         .contentTransition(.identity)
-        .environment(\.violetAppearance, model.preferences.appearance == .purple)
-        .background { WindowAtmosphere().environment(\.violetAppearance, model.preferences.appearance == .purple) }
+        .background { WindowAtmosphere() }
         .foregroundStyle(Color(white: 0.94)).font(.system(size: 13))
         .task {
             guard !model.isFixture else { return }

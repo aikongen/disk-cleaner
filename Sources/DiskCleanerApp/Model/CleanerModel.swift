@@ -84,7 +84,7 @@ final class CleanerModel: ObservableObject {
     @Published private(set) var revealedPath: String?
     @Published private(set) var revealCount = 0
 
-    static let firstLaunchPreferences = UserPreferences(appearance: .purple, rememberLastScan: true, retention: .thirty)
+    static let firstLaunchPreferences = UserPreferences(rememberLastScan: true, retention: .thirty)
 
     let isFixture: Bool
     let initialScene: FixtureScene?
