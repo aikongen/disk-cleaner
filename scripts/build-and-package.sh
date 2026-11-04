@@ -25,8 +25,13 @@ BIN_DIR="$(swift build -c release --show-bin-path)"
 [[ -x "$BIN_DIR/disk-cleanerctl" ]] || { echo "Missing release CLI executable." >&2; exit 1; }
 mkdir -p "$DIST_DIR"
 
+# The Help Book is generated from the consumer docs; each app gets its own book id.
+HELP_ID="com.aikongen.diskcleaner.help"
+"$PACKAGE_ROOT/scripts/make-help-book.sh" "$DIST_DIR/.help-normal" "$HELP_ID"
+"$PACKAGE_ROOT/scripts/make-help-book.sh" "$DIST_DIR/.help-preview" "$HELP_ID.preview"
+
 write_info_plist() {
-  local plist_path="$1" bundle_name="$2" bundle_id="$3" demo_mode="$4"
+  local plist_path="$1" bundle_name="$2" bundle_id="$3" demo_mode="$4" help_id="$5"
   cat > "$plist_path" <<PLIST
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -34,6 +39,8 @@ write_info_plist() {
 <dict>
   <key>CFBundleDevelopmentRegion</key><string>en</string>
   <key>CFBundleExecutable</key><string>DiskCleanerApp</string>
+  <key>CFBundleHelpBookFolder</key><string>DiskCleaner.help</string>
+  <key>CFBundleHelpBookName</key><string>$help_id</string>
   <key>CFBundleIconFile</key><string>DiskCleaner</string>
   <key>CFBundleIdentifier</key><string>$bundle_id</string>
   <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
@@ -52,7 +59,7 @@ PLIST
 }
 
 package_app() {
-  local app_name="$1" bundle_id="$2" demo_mode="$3"
+  local app_name="$1" bundle_id="$2" demo_mode="$3" help_dir="$4" help_id="$5"
   local final_app="$DIST_DIR/$app_name.app"
   local stage_dir app_dir demo_keys
   stage_dir="$(mktemp -d "$DIST_DIR/.package.XXXXXX")"
@@ -62,6 +69,7 @@ package_app() {
   install -m 755 "$BIN_DIR/DiskCleanerApp" "$app_dir/Contents/MacOS/DiskCleanerApp"
   install -m 755 "$BIN_DIR/disk-cleanerctl" "$app_dir/Contents/MacOS/disk-cleanerctl"
   install -m 644 "$PACKAGE_ROOT/assets/icon/DiskCleaner.icns" "$app_dir/Contents/Resources/DiskCleaner.icns"
+  cp -R "$DIST_DIR/.help-$help_dir/DiskCleaner.help" "$app_dir/Contents/Resources/DiskCleaner.help"
   printf 'APPL????' > "$app_dir/Contents/PkgInfo"
 
   demo_keys=""
@@ -69,7 +77,7 @@ package_app() {
     demo_keys='  <key>DiskCleanerDemoMode</key><true/>
   <key>DiskCleanerDemoScene</key><string>overview</string>'
   fi
-  write_info_plist "$app_dir/Contents/Info.plist" "$app_name" "$bundle_id" "$demo_keys"
+  write_info_plist "$app_dir/Contents/Info.plist" "$app_name" "$bundle_id" "$demo_keys" "$help_id"
 
   codesign --force --sign - --timestamp=none --identifier "$bundle_id" "$app_dir"
   codesign --verify --deep --strict --verbose=2 "$app_dir"
@@ -80,8 +88,9 @@ package_app() {
   rmdir "$stage_dir"
 }
 
-package_app "Disk Cleaner" "com.aikongen.diskcleaner" false
-package_app "Disk Cleaner Preview" "com.aikongen.diskcleaner.preview" true
+package_app "Disk Cleaner" "com.aikongen.diskcleaner" false normal "$HELP_ID"
+package_app "Disk Cleaner Preview" "com.aikongen.diskcleaner.preview" true preview "$HELP_ID.preview"
+rm -rf "$DIST_DIR/.help-normal" "$DIST_DIR/.help-preview"
 
 # Drag-to-install disk image: both apps plus an Applications link, compressed and read-only.
 DMG_PATH="$DIST_DIR/DiskCleaner-v$VERSION.dmg"
@@ -103,7 +112,7 @@ rm -rf "$DMG_STAGE"
 
 (
   cd "$PACKAGE_ROOT"
-  find CONTRACT.md Package.swift Sources Tests scripts/build-and-package.sh assets/icon/DiskCleaner.icns -type f -print | LC_ALL=C sort | while IFS= read -r file; do
+  find CONTRACT.md Package.swift README.md CHANGELOG.md docs Sources Tests scripts/build-and-package.sh scripts/make-help-book.sh scripts/help-book assets/icon/DiskCleaner.icns -type f ! -name .DS_Store -print | LC_ALL=C sort | while IFS= read -r file; do
     shasum -a 256 "$file"
   done
 ) > "$DIST_DIR/SOURCE-MANIFEST.sha256"

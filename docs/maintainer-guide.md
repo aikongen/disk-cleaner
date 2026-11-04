@@ -53,6 +53,12 @@ The packaging script refuses an output folder outside the repository, replaces o
 
 `xcode/DiskCleanerHost/DiskCleanerHost.xcodeproj` builds the same `Sources/` and `Tests/` through Xcode, so Apple's Xcode build, test and preview tools can work on them. Its file references are relative to the repository root. The `DiskCleaner` scheme builds the Core framework, the normal app, the CLI and the tests; `DiskCleanerFunctionalPreview` builds the example-data app. The Xcode app target does not embed `disk-cleanerctl`; the packaging script does. When you add or remove a source file, add or remove it in the Xcode project too.
 
+## Help Book
+
+Help menu > Disk Cleaner Help opens `DiskCleaner.help`, an Apple Help Book that Tips.app shows on current macOS. It is generated from the `audience: consumer` docs and the changelog section for the packaged version by `scripts/make-help-book.sh [output-parent-dir] [book-id]`. Edit those docs, never the generated HTML. `scripts/help-book/build.py` lists the topic pages and drops links that leave the consumer set; `md2html.py` is the Markdown converter and `style.css` the look. The script builds the search index with `hiutil`.
+
+Only `scripts/build-and-package.sh` ships the apps. It generates one book per app (`com.aikongen.diskcleaner.help` and `com.aikongen.diskcleaner.help.preview`, so the books never mix), copies it to `Contents/Resources/DiskCleaner.help` and writes `CFBundleHelpBookFolder` and `CFBundleHelpBookName` into each Info.plist. The Xcode project does not build the book, and a plain `swift run` has no bundle, so Help shows nothing there. The build stops if `CHANGELOG.md` has no section for the version.
+
 ## Boundaries
 
 - `DiskCleanerCore`: Codable models, the metadata inventory scanner, comparable observations, JSON and lock persistence, capacity-check jobs and the reviewed manual Trash move. No dependency on AppKit or SwiftUI and no cleanup provider registry.
