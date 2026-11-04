@@ -25,3 +25,5 @@ Pages live in [docs](docs/README.md) under Diátaxis folders (tutorials, how-to,
 ## Changelog and pull requests
 
 Add an entry under `## Unreleased` in [CHANGELOG.md](CHANGELOG.md) for every user-visible change. Open a pull request with the [template](.github/PULL_REQUEST_TEMPLATE.md); include screenshots or frames for UI changes.
+
+By contributing you agree that your contributions are licensed under the MIT License.

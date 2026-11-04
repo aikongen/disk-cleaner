@@ -11,6 +11,7 @@ See what fills your Mac, choose exactly what goes, and give your AI agent an hon
   <a href="https://github.com/aikongen/disk-cleaner/releases"><img src="https://img.shields.io/github/v/release/aikongen/disk-cleaner?include_prereleases&label=release&style=flat&color=6941C6" alt="Latest release"></a>
   <img src="https://img.shields.io/badge/macOS_14%2B_%C2%B7_Apple_silicon-1F1A33?style=flat&logo=apple&logoColor=white" alt="macOS 14 or later on Apple silicon">
   <img src="https://img.shields.io/badge/Swift_6-6941C6?style=flat&logo=swift&logoColor=white" alt="Swift 6">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-7F56D9?style=flat" alt="MIT license"></a>
 </p>
 
 Most disk tools either draw you a chart or clean "junk" on their own terms. Disk Cleaner shows you what is really there, lets you choose exactly what goes, and tells an AI agent the truth too. It is a personal, local macOS app: your data stays on your Mac.
@@ -113,7 +114,7 @@ Good to know: space returns only when you empty the Trash, and Finder's Put Back
 ## Contribute / Maintain
 
 Build, test and pull request rules are in [CONTRIBUTING.md](CONTRIBUTING.md); fixture isolation, the Xcode project and evidence conventions are in the [maintainer guide](docs/maintainer-guide.md).
-Working rules for contributors and agents are in [AGENTS.md](AGENTS.md), and security reports go through [SECURITY.md](SECURITY.md).
+Working rules for contributors and agents are in [AGENTS.md](AGENTS.md), and security reports go through [SECURITY.md](SECURITY.md). Disk Cleaner is released under the [MIT License](LICENSE).
 
 <p align="center">
   <a href="https://github.com/aikongen"><img src="assets/made-with-love-aikongen.svg" alt="Made with love by Aikongen" height="40"></a>
