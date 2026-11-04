@@ -1,0 +1,34 @@
+# Private collaboration state, records, evidence, apps and prototypes
+/.local/
+/.bro/
+/bro-state.md
+
+# SwiftPM and Xcode build products and per-user state
+.build/
+/artifacts/
+.swiftpm/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+build/
+*.app
+*.zip
+*.dSYM/
+*.xcarchive
+*.xcresult
+
+# Local environment
+.env
+.env.*
+!.env.example
+*.log
+__pycache__/
+.DS_Store
+
+# local tooling from a private repository
+/.bro-code/
+/.agents/
+/.claude/
+/.codex/

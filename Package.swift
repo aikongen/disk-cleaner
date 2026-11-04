@@ -1,0 +1,3 @@
+// swift-tools-version: 6.0
+import PackageDescription
+let package = Package(name: "DiskCleaner", platforms: [.macOS(.v14)], products: [.library(name: "DiskCleanerCore", targets: ["DiskCleanerCore"]), .executable(name: "DiskCleanerApp", targets: ["DiskCleanerApp"]), .executable(name: "disk-cleanerctl", targets: ["DiskCleanerCLI"])], targets: [.target(name: "DiskCleanerCore"), .executableTarget(name: "DiskCleanerApp", dependencies: ["DiskCleanerCore"]), .executableTarget(name: "DiskCleanerCLI", dependencies: ["DiskCleanerCore"]), .testTarget(name: "DiskCleanerCoreTests", dependencies: ["DiskCleanerCore", "DiskCleanerApp"])])

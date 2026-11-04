@@ -1,0 +1,1400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF5314D05739AD0BEFF0A1EA /* MotionFramesSettingsExitTab4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F251EB5722D56CC453779 /* MotionFramesSettingsExitTab4.swift */; };
+		636DAE0C2B9D9275C83568F0 /* MotionFramesSettingsExitTab4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F251EB5722D56CC453779 /* MotionFramesSettingsExitTab4.swift */; };
+		A9FADC661C28F0F014BCEC16 /* MotionFramesSettingsExitTab3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2722D963744474E4B9D4D5A /* MotionFramesSettingsExitTab3.swift */; };
+		9E20463ECC844806B1431C3E /* MotionFramesSettingsExitTab3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2722D963744474E4B9D4D5A /* MotionFramesSettingsExitTab3.swift */; };
+		44D2BD714649C8B981BA34B8 /* MotionFramesSettingsExitTab2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F3AC9C05BBB68AE9A353C /* MotionFramesSettingsExitTab2.swift */; };
+		BBD33260E56B1D5E1EFA8447 /* MotionFramesSettingsExitTab2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F3AC9C05BBB68AE9A353C /* MotionFramesSettingsExitTab2.swift */; };
+		6C51A7DF7B23FF65C11BD370 /* MotionFramesSettingsExitTab1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D256F9200FC59DCDEF43B7F5 /* MotionFramesSettingsExitTab1.swift */; };
+		BEE6FAFD6E9C3BF1450812B2 /* MotionFramesSettingsExitTab1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D256F9200FC59DCDEF43B7F5 /* MotionFramesSettingsExitTab1.swift */; };
+		24293BE5B99DC33DE9E7A022 /* MotionFramesSettingsExitTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A104112FD9CD8559298C6E /* MotionFramesSettingsExitTab.swift */; };
+		98A8651731EF682553335309 /* MotionFramesSettingsExitTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A104112FD9CD8559298C6E /* MotionFramesSettingsExitTab.swift */; };
+		13D385FD42ED3EBA5130BAD2 /* MotionFramesRowSelect4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FCEFF37DA4C9799C0B8DE /* MotionFramesRowSelect4.swift */; };
+		C28EC1759CD29EF005B5C343 /* MotionFramesRowSelect4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FCEFF37DA4C9799C0B8DE /* MotionFramesRowSelect4.swift */; };
+		53580CF20B1CB0C2321E5DF7 /* MotionFramesRowSelect3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEADFA7C2A54C720CC2AE55 /* MotionFramesRowSelect3.swift */; };
+		67890F82DAE25A0586C6E3C1 /* MotionFramesRowSelect3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEADFA7C2A54C720CC2AE55 /* MotionFramesRowSelect3.swift */; };
+		9B0A8042B5B320849F613B75 /* MotionFramesRowSelect2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87587ECEB1C4615EF5E99AB /* MotionFramesRowSelect2.swift */; };
+		AA4DD8D465441BC5C94526F8 /* MotionFramesRowSelect2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87587ECEB1C4615EF5E99AB /* MotionFramesRowSelect2.swift */; };
+		256AF39E55463F219927BBE0 /* MotionFramesRowSelect1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9649297ADE4AF3A6AAE9B8C2 /* MotionFramesRowSelect1.swift */; };
+		7C1E2C5DAE93E12B7E866819 /* MotionFramesRowSelect1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9649297ADE4AF3A6AAE9B8C2 /* MotionFramesRowSelect1.swift */; };
+		388FB35DEA5D393E3DBB4E90 /* MotionFramesRowSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F578BC0A5A17706B32D17 /* MotionFramesRowSelect.swift */; };
+		5DEECCC1BDD55C53FD30E424 /* MotionFramesRowSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F578BC0A5A17706B32D17 /* MotionFramesRowSelect.swift */; };
+		0389FD90815539C8E650399E /* DiskCleanerSceneTrashOutcomePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674617ECF0D8806F662CA0BC /* DiskCleanerSceneTrashOutcomePreview.swift */; };
+		211F89A33D4E1F887B1451ED /* DiskCleanerSceneTrashOutcomePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674617ECF0D8806F662CA0BC /* DiskCleanerSceneTrashOutcomePreview.swift */; };
+		DA96837532F09B7EF2B2EA0C /* DiskCleanerSceneTrashReviewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5223C7158B4B090931BD4AE7 /* DiskCleanerSceneTrashReviewPreview.swift */; };
+		DC51CBFE94DF6854818AD7FB /* DiskCleanerSceneTrashReviewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5223C7158B4B090931BD4AE7 /* DiskCleanerSceneTrashReviewPreview.swift */; };
+		23899AC9D37F6643619F6792 /* DiskCleanerSceneSettingsPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B85E6A27A9ED6BADF8F611 /* DiskCleanerSceneSettingsPreview.swift */; };
+		4D597FE982A82CEF2A5CA606 /* DiskCleanerSceneSettingsPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B85E6A27A9ED6BADF8F611 /* DiskCleanerSceneSettingsPreview.swift */; };
+		DCAE89FA2732F1E91ABE17B6 /* DiskCleanerSceneScanningPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12E234EF122AD82D8EF89D /* DiskCleanerSceneScanningPreview.swift */; };
+		2F49A364E272A548F758BC97 /* DiskCleanerSceneScanningPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12E234EF122AD82D8EF89D /* DiskCleanerSceneScanningPreview.swift */; };
+		E694700F217ADAED9B2DF179 /* DiskCleanerSceneEmptyPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D601DFE09F1DE6C5F7F9E5 /* DiskCleanerSceneEmptyPreview.swift */; };
+		B4C2FD512AC380DF5F1CCED1 /* DiskCleanerSceneEmptyPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D601DFE09F1DE6C5F7F9E5 /* DiskCleanerSceneEmptyPreview.swift */; };
+		2C95D0C2FA38B38522FB3697 /* DiskCleanerSceneBrowseTreePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7AF366C8A31C9B7E271B5 /* DiskCleanerSceneBrowseTreePreview.swift */; };
+		90CDA005E0DE72D320BF5104 /* DiskCleanerSceneBrowseTreePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7AF366C8A31C9B7E271B5 /* DiskCleanerSceneBrowseTreePreview.swift */; };
+		2F5A71A6DC9548F5FF00DA6D /* DiskCleanerSceneBrowsePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB4B9984215DEE567CC55C0 /* DiskCleanerSceneBrowsePreview.swift */; };
+		83F44A1E58C8025F53596B23 /* DiskCleanerSceneBrowsePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB4B9984215DEE567CC55C0 /* DiskCleanerSceneBrowsePreview.swift */; };
+		8FAC6E7A1D8C9FA35F82AFE4 /* DiskCleanerSceneOverviewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C46FE2F9A4C9AA19C8A9437 /* DiskCleanerSceneOverviewPreview.swift */; };
+		4393DCCEA06BC69A262AA5C8 /* DiskCleanerSceneOverviewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C46FE2F9A4C9AA19C8A9437 /* DiskCleanerSceneOverviewPreview.swift */; };
+		19BA617E9B5C77929DF2E57A /* MotionFramesSettingsOpen4.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DE65824024B7DC51AD73FC /* MotionFramesSettingsOpen4.swift */; };
+		0713DB9C99DDBD85D02E7259 /* MotionFramesSettingsOpen4.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DE65824024B7DC51AD73FC /* MotionFramesSettingsOpen4.swift */; };
+		FBCA6BAC162D8997505F7D6D /* MotionFramesSettingsOpen3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9544E1AE2886CD499FE0AB1 /* MotionFramesSettingsOpen3.swift */; };
+		60D38B56A66291CC5E7EFDD4 /* MotionFramesSettingsOpen3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9544E1AE2886CD499FE0AB1 /* MotionFramesSettingsOpen3.swift */; };
+		A0A6EA6409B45F0439B41ED1 /* MotionFramesSettingsOpen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AFF9B7331E58D29E99E4 /* MotionFramesSettingsOpen2.swift */; };
+		04AC3FBA8ABFBF457777AA85 /* MotionFramesSettingsOpen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A030AFF9B7331E58D29E99E4 /* MotionFramesSettingsOpen2.swift */; };
+		26DE31E68C6C9DD6BC7E332F /* MotionFramesSettingsOpen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9266D2C56E2C9F98E1CC5AB5 /* MotionFramesSettingsOpen1.swift */; };
+		67063C0C9DB671C66B4CC772 /* MotionFramesSettingsOpen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9266D2C56E2C9F98E1CC5AB5 /* MotionFramesSettingsOpen1.swift */; };
+		5C25FE2908DEF18D247F1E83 /* MotionFramesSettingsOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510C6DBD2E41C4A776A099A /* MotionFramesSettingsOpen.swift */; };
+		0E5768A7E63224B24CD13C18 /* MotionFramesSettingsOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510C6DBD2E41C4A776A099A /* MotionFramesSettingsOpen.swift */; };
+		6278F5339FD79AC3B46466EE /* MotionFramesRequestSwitch4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494C22E373C9753B65B04C0D /* MotionFramesRequestSwitch4.swift */; };
+		E3EC7CC5160E553112352FCC /* MotionFramesRequestSwitch4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494C22E373C9753B65B04C0D /* MotionFramesRequestSwitch4.swift */; };
+		CD63DE48C47B4E697182F93F /* MotionFramesRequestSwitch3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CB96D1CAF5F553D86629F0 /* MotionFramesRequestSwitch3.swift */; };
+		BFDD1482624022DEDFD0138B /* MotionFramesRequestSwitch3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CB96D1CAF5F553D86629F0 /* MotionFramesRequestSwitch3.swift */; };
+		A8F85D90F23973A8A7B0DA04 /* MotionFramesRequestSwitch2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CF5AB50D012094F0FFDB43 /* MotionFramesRequestSwitch2.swift */; };
+		23C720F37F473050BF72E28C /* MotionFramesRequestSwitch2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CF5AB50D012094F0FFDB43 /* MotionFramesRequestSwitch2.swift */; };
+		65567B6C7C1B40133E607DA9 /* MotionFramesRequestSwitch1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2CAB359EAA2BE047F3BD4 /* MotionFramesRequestSwitch1.swift */; };
+		BFB31EBA2E4EB5BA8D13E920 /* MotionFramesRequestSwitch1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2CAB359EAA2BE047F3BD4 /* MotionFramesRequestSwitch1.swift */; };
+		6FFE6CD2BFA5A54802A5712F /* MotionFramesRequestSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1305AD5BD44E6C836C8AD303 /* MotionFramesRequestSwitch.swift */; };
+		FBFBAB518715895D564A97B8 /* MotionFramesRequestSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1305AD5BD44E6C836C8AD303 /* MotionFramesRequestSwitch.swift */; };
+		743BBF2D20D34953C92CEA44 /* MotionFramesBannerExit4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183EC29FFF4698B526BB0BAD /* MotionFramesBannerExit4.swift */; };
+		41DAB929A5FFC5E480F46C9A /* MotionFramesBannerExit4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183EC29FFF4698B526BB0BAD /* MotionFramesBannerExit4.swift */; };
+		B5463E0250282FCC201C3B1A /* MotionFramesBannerExit3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A9BC77BB478BB41BDAD47 /* MotionFramesBannerExit3.swift */; };
+		38F72D6E2A5D46103628FD0E /* MotionFramesBannerExit3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A9BC77BB478BB41BDAD47 /* MotionFramesBannerExit3.swift */; };
+		9989475EFA3BF82C788C726F /* MotionFramesBannerExit2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699CBE4F83ED22E96EFFF56 /* MotionFramesBannerExit2.swift */; };
+		0E6CB9DCF97B7B43FB06F4AD /* MotionFramesBannerExit2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699CBE4F83ED22E96EFFF56 /* MotionFramesBannerExit2.swift */; };
+		B2764BCA1DB5F346F76A788A /* MotionFramesBannerExit1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40E071EE1725A99EF3F0FD0 /* MotionFramesBannerExit1.swift */; };
+		1FF504FCF5574CD6D6357328 /* MotionFramesBannerExit1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40E071EE1725A99EF3F0FD0 /* MotionFramesBannerExit1.swift */; };
+		7690AB451BFF18258F6B5684 /* MotionFramesBannerExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9648E14413D5F885E839BA4 /* MotionFramesBannerExit.swift */; };
+		5F3A1F524ECFFF44E1F8A4D7 /* MotionFramesBannerExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9648E14413D5F885E839BA4 /* MotionFramesBannerExit.swift */; };
+		3EFDF7E7356B630832A27255 /* MotionFramesReviewCancel4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA213857536AFD5B6B4E28 /* MotionFramesReviewCancel4.swift */; };
+		B09704B0837CD4CD408AD1AF /* MotionFramesReviewCancel4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA213857536AFD5B6B4E28 /* MotionFramesReviewCancel4.swift */; };
+		E4ABC5FDB7EC17D9D4621558 /* MotionFramesReviewCancel3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0EB4C7C7CB2682FAAC3431 /* MotionFramesReviewCancel3.swift */; };
+		813B3BBDBFBB152C663C1A2C /* MotionFramesReviewCancel3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0EB4C7C7CB2682FAAC3431 /* MotionFramesReviewCancel3.swift */; };
+		B5E308E13C2BC33877216AA5 /* MotionFramesReviewCancel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2884339DD4615EB13BC480 /* MotionFramesReviewCancel2.swift */; };
+		FB12E3D06627913C5D78FA85 /* MotionFramesReviewCancel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2884339DD4615EB13BC480 /* MotionFramesReviewCancel2.swift */; };
+		EE8BF85A89D82EF809EAF083 /* MotionFramesReviewCancel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408D2D0ECEE1F72885125743 /* MotionFramesReviewCancel1.swift */; };
+		37988060F2D9DBBB4ECBCDAE /* MotionFramesReviewCancel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408D2D0ECEE1F72885125743 /* MotionFramesReviewCancel1.swift */; };
+		2F073C0C3C8A9F6D6353B4D3 /* MotionFramesReviewEnter4.swift in Sources */ = {isa = PBXBuildFile; fileRef = D789B132E78473ABC23D5EF1 /* MotionFramesReviewEnter4.swift */; };
+		08F2AA6A5AB51838FFFF1727 /* MotionFramesReviewEnter4.swift in Sources */ = {isa = PBXBuildFile; fileRef = D789B132E78473ABC23D5EF1 /* MotionFramesReviewEnter4.swift */; };
+		2856A048F949E88784C6D20E /* MotionFramesReviewEnter3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B229C59ABE5918D02E4CED /* MotionFramesReviewEnter3.swift */; };
+		E971EFF3BAE6ED7D78CEA51D /* MotionFramesReviewEnter3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B229C59ABE5918D02E4CED /* MotionFramesReviewEnter3.swift */; };
+		F1943CD558F1AD135DFCB85E /* MotionFramesReviewEnter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A852E0D9E47F736963DF0 /* MotionFramesReviewEnter2.swift */; };
+		F434D92BDC8A0A24B4FE146B /* MotionFramesReviewEnter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A852E0D9E47F736963DF0 /* MotionFramesReviewEnter2.swift */; };
+		53DB992CAC1260830A344697 /* MotionFramesReviewEnter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE331EB79B83065ABE7DB4E /* MotionFramesReviewEnter1.swift */; };
+		93E51C8F2B3970D6E1F476C6 /* MotionFramesReviewEnter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE331EB79B83065ABE7DB4E /* MotionFramesReviewEnter1.swift */; };
+		C55CF5C2AE51EE108D53E93A /* MotionFramesDisclosureClose4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC0221A527210B3F4C383E8 /* MotionFramesDisclosureClose4.swift */; };
+		E2D03AA391C7497A96CBD21B /* MotionFramesDisclosureClose4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC0221A527210B3F4C383E8 /* MotionFramesDisclosureClose4.swift */; };
+		E49CC2744A65A712CE3439F9 /* MotionFramesDisclosureClose3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07919958C766609ED1CC47F8 /* MotionFramesDisclosureClose3.swift */; };
+		8C73159CE45677C38F8D4A02 /* MotionFramesDisclosureClose3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07919958C766609ED1CC47F8 /* MotionFramesDisclosureClose3.swift */; };
+		D061E25E1D212337D1114EF3 /* MotionFramesDisclosureClose2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C1B11FAA1BB1D458E3CD2E /* MotionFramesDisclosureClose2.swift */; };
+		A085648F555EBE23EF374A01 /* MotionFramesDisclosureClose2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C1B11FAA1BB1D458E3CD2E /* MotionFramesDisclosureClose2.swift */; };
+		62CFC9D1E68E3C221780F750 /* MotionFramesDisclosureClose1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5128BB38631DACC233B4F0 /* MotionFramesDisclosureClose1.swift */; };
+		9441A3FCB9650C67D3F0982E /* MotionFramesDisclosureClose1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5128BB38631DACC233B4F0 /* MotionFramesDisclosureClose1.swift */; };
+		8F44738CA54B6C734E82D902 /* MotionFramesDisclosureOpen4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00637ECC7ADBD45F0ED6ADA9 /* MotionFramesDisclosureOpen4.swift */; };
+		2BFA5F856D97F75DB814D14D /* MotionFramesDisclosureOpen4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00637ECC7ADBD45F0ED6ADA9 /* MotionFramesDisclosureOpen4.swift */; };
+		801B9B18C6B0D9C103C5F30E /* MotionFramesDisclosureOpen3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C94837C3B1EDD270D6632 /* MotionFramesDisclosureOpen3.swift */; };
+		F30AFD2D000602381B322EDA /* MotionFramesDisclosureOpen3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C94837C3B1EDD270D6632 /* MotionFramesDisclosureOpen3.swift */; };
+		613C5BB6BBA9922E1F18BECE /* MotionFramesDisclosureOpen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82F69F94EE794C8137DABB /* MotionFramesDisclosureOpen2.swift */; };
+		7F6AD4ACD1BCC4EE1F41B05D /* MotionFramesDisclosureOpen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82F69F94EE794C8137DABB /* MotionFramesDisclosureOpen2.swift */; };
+		5F6FC6D7FE43141742B75345 /* MotionFramesDisclosureOpen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916ED5764A417EE1BCB86C86 /* MotionFramesDisclosureOpen1.swift */; };
+		198720E1C0C7E1759EFBBC02 /* MotionFramesDisclosureOpen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916ED5764A417EE1BCB86C86 /* MotionFramesDisclosureOpen1.swift */; };
+		90D34C335FA40B38C5CCB4B2 /* MotionFramesBack4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC10D46BBEAF56B600379B5 /* MotionFramesBack4.swift */; };
+		00F54F16C2D9130F06678FAE /* MotionFramesBack4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC10D46BBEAF56B600379B5 /* MotionFramesBack4.swift */; };
+		C8EA4B4CFA8AD86FC430759E /* MotionFramesBack3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E635ACBA651DAEC9B92ACA68 /* MotionFramesBack3.swift */; };
+		7F3CE2DF408343ECDA777A8B /* MotionFramesBack3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E635ACBA651DAEC9B92ACA68 /* MotionFramesBack3.swift */; };
+		B595F5B0CF56442352C5893A /* MotionFramesBack2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AFCA69CAA3A0B89F0F8A8D /* MotionFramesBack2.swift */; };
+		13047C6203938036AA0E94E9 /* MotionFramesBack2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AFCA69CAA3A0B89F0F8A8D /* MotionFramesBack2.swift */; };
+		CE6F27F3BD633943C3A898F4 /* MotionFramesBack1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE370A0A3343E17F46845ED /* MotionFramesBack1.swift */; };
+		C1D0B8919737B4EA790C41F2 /* MotionFramesBack1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE370A0A3343E17F46845ED /* MotionFramesBack1.swift */; };
+		59DDCEDEB4DFCBD36DAA5ADB /* MotionFramesDrill4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6870A023359878B49A5F7786 /* MotionFramesDrill4.swift */; };
+		D6538EE8FC6B00BE53A8639D /* MotionFramesDrill4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6870A023359878B49A5F7786 /* MotionFramesDrill4.swift */; };
+		32DD98466D025674F4BE81E2 /* MotionFramesDrill3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86639EF6F7117E38E4A7B38F /* MotionFramesDrill3.swift */; };
+		F566DC01C549EDC4A30C87B5 /* MotionFramesDrill3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86639EF6F7117E38E4A7B38F /* MotionFramesDrill3.swift */; };
+		00F6587AD118ED0BF27288C5 /* MotionFramesDrill2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B805BC8FD4D5777DA8E07 /* MotionFramesDrill2.swift */; };
+		51288D735DA9B3C66378CD1C /* MotionFramesDrill2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B805BC8FD4D5777DA8E07 /* MotionFramesDrill2.swift */; };
+		E7C55240EE2ECC784CFBB824 /* MotionFramesDrill1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE607A37E6AE293EA77F980 /* MotionFramesDrill1.swift */; };
+		5C2F9885C17B07FFC64BB1B5 /* MotionFramesDrill1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE607A37E6AE293EA77F980 /* MotionFramesDrill1.swift */; };
+		BA23662B5AB5735A509B1BAB /* MotionFramesTab4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C79C70BEA750903EE149F4 /* MotionFramesTab4.swift */; };
+		75F55A54C86CE4B84AEF4790 /* MotionFramesTab4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C79C70BEA750903EE149F4 /* MotionFramesTab4.swift */; };
+		ACD7C925B45CCA60E324B569 /* MotionFramesTab3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D13E0DFCCC576D3974303 /* MotionFramesTab3.swift */; };
+		4601F8A63F69801B904B7D9A /* MotionFramesTab3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D13E0DFCCC576D3974303 /* MotionFramesTab3.swift */; };
+		2087857975F0156FC51A2603 /* MotionFramesTab2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84A581D87EE6CA9435E7B9 /* MotionFramesTab2.swift */; };
+		902485889869C49E434B78D3 /* MotionFramesTab2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84A581D87EE6CA9435E7B9 /* MotionFramesTab2.swift */; };
+		C6F4117978B0889739382562 /* MotionFramesTab1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF08E11A94F1F4AB9F66D98 /* MotionFramesTab1.swift */; };
+		DA5A74C1A6C17A9FB07FB7C5 /* MotionFramesTab1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF08E11A94F1F4AB9F66D98 /* MotionFramesTab1.swift */; };
+		33277CE86F07405DB2AF8A82 /* MotionFramesReviewCancel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65EFA2A35B928EB687EE4FD /* MotionFramesReviewCancel.swift */; };
+		B2D0C36D52A6CF53D6FBFC1B /* MotionFramesReviewCancel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65EFA2A35B928EB687EE4FD /* MotionFramesReviewCancel.swift */; };
+		F78ED1DE388844D0049411FA /* MotionFramesReviewEnter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46BD6167B5A858261925862 /* MotionFramesReviewEnter.swift */; };
+		A77D8181C9BD393A7B3C762C /* MotionFramesReviewEnter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46BD6167B5A858261925862 /* MotionFramesReviewEnter.swift */; };
+		DA1FC5011614C87CFA271E31 /* MotionFramesDisclosureClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D73C59CC92D31D3DCC9A885 /* MotionFramesDisclosureClose.swift */; };
+		0E798E8C30D54C7E480AA27C /* MotionFramesDisclosureClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D73C59CC92D31D3DCC9A885 /* MotionFramesDisclosureClose.swift */; };
+		CBB106CD0895172120AEEE8C /* MotionFramesDisclosureOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD0126422E23013A801536C /* MotionFramesDisclosureOpen.swift */; };
+		00F569BE8C027FB4B2FD5EE0 /* MotionFramesDisclosureOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD0126422E23013A801536C /* MotionFramesDisclosureOpen.swift */; };
+		EDEF72F624840FDDAEF9AD32 /* MotionFramesBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C74035E1D8A825A42CCE24 /* MotionFramesBack.swift */; };
+		A716CCC752B397733BCFD951 /* MotionFramesBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C74035E1D8A825A42CCE24 /* MotionFramesBack.swift */; };
+		2C7250486A7E5854DEA40525 /* MotionFramesDrill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06571ADB115B95F9AF58ACD7 /* MotionFramesDrill.swift */; };
+		6A61DBD8CA9C882B284950C2 /* MotionFramesDrill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06571ADB115B95F9AF58ACD7 /* MotionFramesDrill.swift */; };
+		454E2AFDB98AAE7ECD40C68D /* MotionFramesTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F940C39109EA2EFC60A412 /* MotionFramesTab.swift */; };
+		78E0F46C8144F78312B605A4 /* MotionFramesTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F940C39109EA2EFC60A412 /* MotionFramesTab.swift */; };
+		E6994B35A43DB40680BC8493 /* MotionFrameSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1CF50E927F08B9D9DA159E /* MotionFrameSupport.swift */; };
+		67F45EDE1CDC71C59B647BEC /* MotionFrameSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1CF50E927F08B9D9DA159E /* MotionFrameSupport.swift */; };
+		CF6DBB76B7D6038F8F7C751B /* DiskCleanerCleanupPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF9343B33306646C61342F0 /* DiskCleanerCleanupPreview.swift */; };
+		60C04550BD11DB4E1E5A799B /* DiskCleanerCleanupPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF9343B33306646C61342F0 /* DiskCleanerCleanupPreview.swift */; };
+		1FC353F0D696AE370A6BF171 /* DiskCleanerPreviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA558BB1F8BA9685008AFA8 /* DiskCleanerPreviews.swift */; };
+		C09292B3FE146FA2E44AA979 /* DiskCleanerPreviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA558BB1F8BA9685008AFA8 /* DiskCleanerPreviews.swift */; };
+		230DE9CC089EE9FA9E0FE664 /* CleanerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8BA42FB4B1556DC7A0EF6E /* CleanerModel.swift */; };
+		E620A669074C3CE0C871EFDC /* FixtureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC82FB6482C03CE0589FFA4 /* FixtureData.swift */; };
+		262C74C992311247879FBB64 /* LaunchAndFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7B1F64D7CCB38ADC2FDE7 /* LaunchAndFormatting.swift */; };
+		787457E21BFE3BB5E174BCF4 /* TrashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7BD1DDA0EB8BF03D18403 /* TrashFlow.swift */; };
+		A5103CE353C8CE275CFD06BA /* AppModelFixtureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306652CBFAAD78C60C2920D6 /* AppModelFixtureTests.swift */; };
+		FF8FEE6EDFCBE4C2A53187EC /* TrashViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56B3AD7A3ED5E2FE3BCD012 /* TrashViews.swift */; };
+		39331B9DE34A37735BEE8105 /* TrashViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56B3AD7A3ED5E2FE3BCD012 /* TrashViews.swift */; };
+		EC3871F3C0A9C6AC6616CC2B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43AD197D309E78E0B2B8C /* SettingsView.swift */; };
+		4FC59B74F678151049BFB7CB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43AD197D309E78E0B2B8C /* SettingsView.swift */; };
+		58F6948C0409462CB7FF7272 /* OverviewViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D64A34251CFA954C939F89 /* OverviewViews.swift */; };
+		2489E358551B4F09C6EC88A2 /* OverviewViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D64A34251CFA954C939F89 /* OverviewViews.swift */; };
+		CD055F934848453C3A1B54C3 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69C39361273DFCF614F2908 /* Components.swift */; };
+		870E274F0154DADDA79140B1 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69C39361273DFCF614F2908 /* Components.swift */; };
+		319389BCF050237C8D68EBBF /* CleanupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AB66F92370C780CBBBB19F /* CleanupViews.swift */; };
+		C88E619F1C4489AB927DE980 /* CleanupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AB66F92370C780CBBBB19F /* CleanupViews.swift */; };
+		C1F2B43DDEB362C392DBB66A /* BrowseViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C6136BA49616B80A2E63D4 /* BrowseViews.swift */; };
+		356E4C6001292A0CF227EB4E /* BrowseViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C6136BA49616B80A2E63D4 /* BrowseViews.swift */; };
+		B1C0BA213A6BE8EBFB3BE5E8 /* TrashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7BD1DDA0EB8BF03D18403 /* TrashFlow.swift */; };
+		94D348222870B01DC27ECBB9 /* TrashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7BD1DDA0EB8BF03D18403 /* TrashFlow.swift */; };
+		696EFCB0C31B02A9B99E21A8 /* LaunchAndFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7B1F64D7CCB38ADC2FDE7 /* LaunchAndFormatting.swift */; };
+		2C1CF3CC0ED7A3FCC55871C7 /* LaunchAndFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7B1F64D7CCB38ADC2FDE7 /* LaunchAndFormatting.swift */; };
+		7DB444898E77856CB8E32383 /* FixtureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC82FB6482C03CE0589FFA4 /* FixtureData.swift */; };
+		E7B1DE6F1F6DB7424CDE22B7 /* FixtureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC82FB6482C03CE0589FFA4 /* FixtureData.swift */; };
+		7C7AB0119D609E019A89C655 /* CleanerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8BA42FB4B1556DC7A0EF6E /* CleanerModel.swift */; };
+		415690829BDF7589FFBFE549 /* CleanerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8BA42FB4B1556DC7A0EF6E /* CleanerModel.swift */; };
+		9CD2073714DBC64AAC153D10 /* StoreOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D36FE1389FBC0AD401A2C4 /* StoreOperation.swift */; };
+		E2FB9B3A7146068C102F1858 /* ManualTrashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B5564DF0E454831B5FE260 /* ManualTrashTests.swift */; };
+		77A234CAC1BD5C8E89AEA308 /* FunctionalCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E4A61C905A0D979BA4DEE6 /* FunctionalCoreTests.swift */; };
+		54D009ABAFDE27D1A900CF88 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8722FBC356274A2009C34F1F /* Preferences.swift */; };
+		39A48681B44526EEEDCCFFFB /* ManualTrash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6256B7C269714336D00435C8 /* ManualTrash.swift */; };
+		E1375A02319FC02AE30D77EB /* InventoryBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E8FF34153F6D6040524AE /* InventoryBrowser.swift */; };
+		2FDD769616BF1D34C29CCB0B /* FilesystemIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E13D03D825D509EC8A58EB /* FilesystemIdentity.swift */; };
+		14BA64A44E389EF6125856BC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FA7B5548D6E78EB635525 /* main.swift */; };
+		3A84EAAC65FF8525D666004A /* DiskCleanerCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185A8156C61409C0F51D893B /* DiskCleanerCore.framework */; };
+		5FAECB0E94D2A06B10FB844A /* Comparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30DD7DC9257D6263907F4F /* Comparison.swift */; };
+		63454E024B0E3B9C152C0036 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72790DD5BA108B54A07F45CF /* Inventory.swift */; };
+		63477D55E13905E5873A52EB /* DiskCleanerAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25E20EAC4CDF8806447B808 /* DiskCleanerAppearance.swift */; };
+		657170EC1E5B899AC16D0900 /* DiskCleanerAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25E20EAC4CDF8806447B808 /* DiskCleanerAppearance.swift */; };
+		64D28C9E2EE1ABC45BF1AB72 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBA4961D35EBAD1B0CE92D6 /* CoreTests.swift */; };
+		70574A515DA2202C611E445A /* DiskCleanerCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 185A8156C61409C0F51D893B /* DiskCleanerCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DCF0CD9C8527CCA1EC12B66C /* DiskCleanerCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 185A8156C61409C0F51D893B /* DiskCleanerCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		759E28992579DB488262A9C3 /* DiskCleanerCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185A8156C61409C0F51D893B /* DiskCleanerCore.framework */; };
+		959A9670C58ECBE4B6DF9702 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0CED26AD7E9606DCB94DF /* Persistence.swift */; };
+		A4D0B0FE6D627E5E19E1CE5D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8214868D96900B0E8E27AF1D /* Models.swift */; };
+		C28C858FE9121100CB670186 /* JobPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AD803D8418B158A2FF683D /* JobPersistenceTests.swift */; };
+		CA40E4AA6187869AF52422D8 /* ScannerSafetyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A90820FDC1EF76F13FC8A3F /* ScannerSafetyTests.swift */; };
+		E09931B1B8E19F08A1B05ACB /* DiskCleanerCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185A8156C61409C0F51D893B /* DiskCleanerCore.framework */; };
+		54F9FDFE921FBC32230595D1 /* DiskCleanerCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185A8156C61409C0F51D893B /* DiskCleanerCore.framework */; };
+		E62C6400A26B258422D6A16E /* CLIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1C9C6CB3B625138FA3FB76 /* CLIIntegrationTests.swift */; };
+		EB4F46C3D02562CA7668EC27 /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126EF9A7F724AFD4B5776A70 /* Jobs.swift */; };
+		F4A91EBA5369B0ED860EC94A /* DiskCleanerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D1A55A7DF1FACD56D51E2B /* DiskCleanerApp.swift */; };
+		08FB2CD633E40EF9B75E0A2F /* DiskCleanerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D1A55A7DF1FACD56D51E2B /* DiskCleanerApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A4603D6309B597E00604408 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244210E48437B6556980A702 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7B4E5729325BEDEEF2A6DDA;
+			remoteInfo = DiskCleanerCore;
+		};
+		12CD33D9F04CC8D9D1DCD07E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244210E48437B6556980A702 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7B4E5729325BEDEEF2A6DDA;
+			remoteInfo = DiskCleanerCore;
+		};
+		9A4603D7309B597E00604408 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244210E48437B6556980A702 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7B4E5729325BEDEEF2A6DDA;
+			remoteInfo = DiskCleanerCore;
+		};
+		9A4603D8309B597E00604408 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244210E48437B6556980A702 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7B4E5729325BEDEEF2A6DDA;
+			remoteInfo = DiskCleanerCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		275C6E3FA4AF2ADDC9B81D4B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				70574A515DA2202C611E445A /* DiskCleanerCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5F09F33EA9198C2AB15258 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DCF0CD9C8527CCA1EC12B66C /* DiskCleanerCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		216F251EB5722D56CC453779 /* MotionFramesSettingsExitTab4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesSettingsExitTab4.swift"; sourceTree = "<group>"; };
+		D2722D963744474E4B9D4D5A /* MotionFramesSettingsExitTab3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesSettingsExitTab3.swift"; sourceTree = "<group>"; };
+		4B0F3AC9C05BBB68AE9A353C /* MotionFramesSettingsExitTab2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesSettingsExitTab2.swift"; sourceTree = "<group>"; };
+		D256F9200FC59DCDEF43B7F5 /* MotionFramesSettingsExitTab1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesSettingsExitTab1.swift"; sourceTree = "<group>"; };
+		F8A104112FD9CD8559298C6E /* MotionFramesSettingsExitTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesSettingsExitTab.swift"; sourceTree = "<group>"; };
+		579FCEFF37DA4C9799C0B8DE /* MotionFramesRowSelect4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesRowSelect4.swift"; sourceTree = "<group>"; };
+		7DEADFA7C2A54C720CC2AE55 /* MotionFramesRowSelect3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesRowSelect3.swift"; sourceTree = "<group>"; };
+		E87587ECEB1C4615EF5E99AB /* MotionFramesRowSelect2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesRowSelect2.swift"; sourceTree = "<group>"; };
+		9649297ADE4AF3A6AAE9B8C2 /* MotionFramesRowSelect1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesRowSelect1.swift"; sourceTree = "<group>"; };
+		FA3F578BC0A5A17706B32D17 /* MotionFramesRowSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesRowSelect.swift"; sourceTree = "<group>"; };
+		674617ECF0D8806F662CA0BC /* DiskCleanerSceneTrashOutcomePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiskCleanerSceneTrashOutcomePreview.swift"; sourceTree = "<group>"; };
+		5223C7158B4B090931BD4AE7 /* DiskCleanerSceneTrashReviewPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiskCleanerSceneTrashReviewPreview.swift"; sourceTree = "<group>"; };
+		52B85E6A27A9ED6BADF8F611 /* DiskCleanerSceneSettingsPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiskCleanerSceneSettingsPreview.swift"; sourceTree = "<group>"; };
+		EF12E234EF122AD82D8EF89D /* DiskCleanerSceneScanningPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiskCleanerSceneScanningPreview.swift"; sourceTree = "<group>"; };
+		18D601DFE09F1DE6C5F7F9E5 /* DiskCleanerSceneEmptyPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiskCleanerSceneEmptyPreview.swift"; sourceTree = "<group>"; };
+		F3C7AF366C8A31C9B7E271B5 /* DiskCleanerSceneBrowseTreePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiskCleanerSceneBrowseTreePreview.swift"; sourceTree = "<group>"; };
+		0CB4B9984215DEE567CC55C0 /* DiskCleanerSceneBrowsePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiskCleanerSceneBrowsePreview.swift"; sourceTree = "<group>"; };
+		5C46FE2F9A4C9AA19C8A9437 /* DiskCleanerSceneOverviewPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiskCleanerSceneOverviewPreview.swift"; sourceTree = "<group>"; };
+		E1DE65824024B7DC51AD73FC /* MotionFramesSettingsOpen4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesSettingsOpen4.swift"; sourceTree = "<group>"; };
+		C9544E1AE2886CD499FE0AB1 /* MotionFramesSettingsOpen3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesSettingsOpen3.swift"; sourceTree = "<group>"; };
+		A030AFF9B7331E58D29E99E4 /* MotionFramesSettingsOpen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesSettingsOpen2.swift"; sourceTree = "<group>"; };
+		9266D2C56E2C9F98E1CC5AB5 /* MotionFramesSettingsOpen1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesSettingsOpen1.swift"; sourceTree = "<group>"; };
+		3510C6DBD2E41C4A776A099A /* MotionFramesSettingsOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesSettingsOpen.swift"; sourceTree = "<group>"; };
+		494C22E373C9753B65B04C0D /* MotionFramesRequestSwitch4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesRequestSwitch4.swift"; sourceTree = "<group>"; };
+		63CB96D1CAF5F553D86629F0 /* MotionFramesRequestSwitch3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesRequestSwitch3.swift"; sourceTree = "<group>"; };
+		E7CF5AB50D012094F0FFDB43 /* MotionFramesRequestSwitch2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesRequestSwitch2.swift"; sourceTree = "<group>"; };
+		42F2CAB359EAA2BE047F3BD4 /* MotionFramesRequestSwitch1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesRequestSwitch1.swift"; sourceTree = "<group>"; };
+		1305AD5BD44E6C836C8AD303 /* MotionFramesRequestSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesRequestSwitch.swift"; sourceTree = "<group>"; };
+		183EC29FFF4698B526BB0BAD /* MotionFramesBannerExit4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesBannerExit4.swift"; sourceTree = "<group>"; };
+		C55A9BC77BB478BB41BDAD47 /* MotionFramesBannerExit3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesBannerExit3.swift"; sourceTree = "<group>"; };
+		8699CBE4F83ED22E96EFFF56 /* MotionFramesBannerExit2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesBannerExit2.swift"; sourceTree = "<group>"; };
+		B40E071EE1725A99EF3F0FD0 /* MotionFramesBannerExit1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesBannerExit1.swift"; sourceTree = "<group>"; };
+		A9648E14413D5F885E839BA4 /* MotionFramesBannerExit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesBannerExit.swift"; sourceTree = "<group>"; };
+		85DA213857536AFD5B6B4E28 /* MotionFramesReviewCancel4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesReviewCancel4.swift"; sourceTree = "<group>"; };
+		FE0EB4C7C7CB2682FAAC3431 /* MotionFramesReviewCancel3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesReviewCancel3.swift"; sourceTree = "<group>"; };
+		1C2884339DD4615EB13BC480 /* MotionFramesReviewCancel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesReviewCancel2.swift"; sourceTree = "<group>"; };
+		408D2D0ECEE1F72885125743 /* MotionFramesReviewCancel1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesReviewCancel1.swift"; sourceTree = "<group>"; };
+		D789B132E78473ABC23D5EF1 /* MotionFramesReviewEnter4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesReviewEnter4.swift"; sourceTree = "<group>"; };
+		91B229C59ABE5918D02E4CED /* MotionFramesReviewEnter3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesReviewEnter3.swift"; sourceTree = "<group>"; };
+		DA0A852E0D9E47F736963DF0 /* MotionFramesReviewEnter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesReviewEnter2.swift"; sourceTree = "<group>"; };
+		7DE331EB79B83065ABE7DB4E /* MotionFramesReviewEnter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesReviewEnter1.swift"; sourceTree = "<group>"; };
+		6DC0221A527210B3F4C383E8 /* MotionFramesDisclosureClose4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesDisclosureClose4.swift"; sourceTree = "<group>"; };
+		07919958C766609ED1CC47F8 /* MotionFramesDisclosureClose3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesDisclosureClose3.swift"; sourceTree = "<group>"; };
+		14C1B11FAA1BB1D458E3CD2E /* MotionFramesDisclosureClose2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesDisclosureClose2.swift"; sourceTree = "<group>"; };
+		DC5128BB38631DACC233B4F0 /* MotionFramesDisclosureClose1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesDisclosureClose1.swift"; sourceTree = "<group>"; };
+		00637ECC7ADBD45F0ED6ADA9 /* MotionFramesDisclosureOpen4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesDisclosureOpen4.swift"; sourceTree = "<group>"; };
+		AB1C94837C3B1EDD270D6632 /* MotionFramesDisclosureOpen3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesDisclosureOpen3.swift"; sourceTree = "<group>"; };
+		5C82F69F94EE794C8137DABB /* MotionFramesDisclosureOpen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesDisclosureOpen2.swift"; sourceTree = "<group>"; };
+		916ED5764A417EE1BCB86C86 /* MotionFramesDisclosureOpen1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesDisclosureOpen1.swift"; sourceTree = "<group>"; };
+		6AC10D46BBEAF56B600379B5 /* MotionFramesBack4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesBack4.swift"; sourceTree = "<group>"; };
+		E635ACBA651DAEC9B92ACA68 /* MotionFramesBack3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesBack3.swift"; sourceTree = "<group>"; };
+		65AFCA69CAA3A0B89F0F8A8D /* MotionFramesBack2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesBack2.swift"; sourceTree = "<group>"; };
+		6BE370A0A3343E17F46845ED /* MotionFramesBack1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesBack1.swift"; sourceTree = "<group>"; };
+		6870A023359878B49A5F7786 /* MotionFramesDrill4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesDrill4.swift"; sourceTree = "<group>"; };
+		86639EF6F7117E38E4A7B38F /* MotionFramesDrill3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesDrill3.swift"; sourceTree = "<group>"; };
+		E89B805BC8FD4D5777DA8E07 /* MotionFramesDrill2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesDrill2.swift"; sourceTree = "<group>"; };
+		FEE607A37E6AE293EA77F980 /* MotionFramesDrill1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesDrill1.swift"; sourceTree = "<group>"; };
+		30C79C70BEA750903EE149F4 /* MotionFramesTab4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesTab4.swift"; sourceTree = "<group>"; };
+		4C7D13E0DFCCC576D3974303 /* MotionFramesTab3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesTab3.swift"; sourceTree = "<group>"; };
+		EB84A581D87EE6CA9435E7B9 /* MotionFramesTab2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesTab2.swift"; sourceTree = "<group>"; };
+		5BF08E11A94F1F4AB9F66D98 /* MotionFramesTab1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesTab1.swift"; sourceTree = "<group>"; };
+		D65EFA2A35B928EB687EE4FD /* MotionFramesReviewCancel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesReviewCancel.swift"; sourceTree = "<group>"; };
+		C46BD6167B5A858261925862 /* MotionFramesReviewEnter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesReviewEnter.swift"; sourceTree = "<group>"; };
+		2D73C59CC92D31D3DCC9A885 /* MotionFramesDisclosureClose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesDisclosureClose.swift"; sourceTree = "<group>"; };
+		EDD0126422E23013A801536C /* MotionFramesDisclosureOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesDisclosureOpen.swift"; sourceTree = "<group>"; };
+		E0C74035E1D8A825A42CCE24 /* MotionFramesBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesBack.swift"; sourceTree = "<group>"; };
+		06571ADB115B95F9AF58ACD7 /* MotionFramesDrill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesDrill.swift"; sourceTree = "<group>"; };
+		73F940C39109EA2EFC60A412 /* MotionFramesTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesTab.swift"; sourceTree = "<group>"; };
+		6D1CF50E927F08B9D9DA159E /* MotionFrameSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFrameSupport.swift"; sourceTree = "<group>"; };
+		7CF9343B33306646C61342F0 /* DiskCleanerCleanupPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiskCleanerCleanupPreview.swift"; sourceTree = "<group>"; };
+		3AA558BB1F8BA9685008AFA8 /* DiskCleanerPreviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiskCleanerPreviews.swift"; sourceTree = "<group>"; };
+		306652CBFAAD78C60C2920D6 /* AppModelFixtureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppModelFixtureTests.swift"; sourceTree = "<group>"; };
+		C56B3AD7A3ED5E2FE3BCD012 /* TrashViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/TrashViews.swift"; sourceTree = "<group>"; };
+		D4C43AD197D309E78E0B2B8C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/SettingsView.swift"; sourceTree = "<group>"; };
+		F5D64A34251CFA954C939F89 /* OverviewViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/OverviewViews.swift"; sourceTree = "<group>"; };
+		F69C39361273DFCF614F2908 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/Components.swift"; sourceTree = "<group>"; };
+		B9AB66F92370C780CBBBB19F /* CleanupViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/CleanupViews.swift"; sourceTree = "<group>"; };
+		A4C6136BA49616B80A2E63D4 /* BrowseViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/BrowseViews.swift"; sourceTree = "<group>"; };
+		E0D7BD1DDA0EB8BF03D18403 /* TrashFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model/TrashFlow.swift"; sourceTree = "<group>"; };
+		CDE7B1F64D7CCB38ADC2FDE7 /* LaunchAndFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model/LaunchAndFormatting.swift"; sourceTree = "<group>"; };
+		6DC82FB6482C03CE0589FFA4 /* FixtureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model/FixtureData.swift"; sourceTree = "<group>"; };
+		8C8BA42FB4B1556DC7A0EF6E /* CleanerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model/CleanerModel.swift"; sourceTree = "<group>"; };
+		24D36FE1389FBC0AD401A2C4 /* StoreOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreOperation.swift"; sourceTree = "<group>"; };
+		61B5564DF0E454831B5FE260 /* ManualTrashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManualTrashTests.swift"; sourceTree = "<group>"; };
+		B6E4A61C905A0D979BA4DEE6 /* FunctionalCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FunctionalCoreTests.swift"; sourceTree = "<group>"; };
+		8722FBC356274A2009C34F1F /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preferences.swift"; sourceTree = "<group>"; };
+		6256B7C269714336D00435C8 /* ManualTrash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManualTrash.swift"; sourceTree = "<group>"; };
+		7D8E8FF34153F6D6040524AE /* InventoryBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InventoryBrowser.swift"; sourceTree = "<group>"; };
+		D9E13D03D825D509EC8A58EB /* FilesystemIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilesystemIdentity.swift"; sourceTree = "<group>"; };
+		126EF9A7F724AFD4B5776A70 /* Jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobs.swift; sourceTree = "<group>"; };
+		185A8156C61409C0F51D893B /* DiskCleanerCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DiskCleanerCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		378FA7B5548D6E78EB635525 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		510DF14090C0E8CCB6386535 /* DiskCleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = DiskCleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFE91A6A0CCB3CBFB882CE6 /* DiskCleanerFunctionalPreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = DiskCleanerFunctionalPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62AD803D8418B158A2FF683D /* JobPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPersistenceTests.swift; sourceTree = "<group>"; };
+		6D1C9C6CB3B625138FA3FB76 /* CLIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIIntegrationTests.swift; sourceTree = "<group>"; };
+		72790DD5BA108B54A07F45CF /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
+		8214868D96900B0E8E27AF1D /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		8A90820FDC1EF76F13FC8A3F /* ScannerSafetyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerSafetyTests.swift; sourceTree = "<group>"; };
+		8BD0CED26AD7E9606DCB94DF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		8FF072383B21D9896E5BBC1C /* DiskCleanerCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = DiskCleanerCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91D1A55A7DF1FACD56D51E2B /* DiskCleanerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCleanerApp.swift; sourceTree = "<group>"; };
+		9A4603D9309B5A1D00604408 /* DiskCleanerApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DiskCleanerApp-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CCBA4961D35EBAD1B0CE92D6 /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
+		E023763F09D1C832E2FF5AF0 /* disk-cleanerctl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "disk-cleanerctl"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E25E20EAC4CDF8806447B808 /* DiskCleanerAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCleanerAppearance.swift; sourceTree = "<group>"; };
+		FA30DD7DC9257D6263907F4F /* Comparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparison.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C2D05BB86095B8FF3B9F29A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A84EAAC65FF8525D666004A /* DiskCleanerCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		457D9E1009B281B5E68915CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E09931B1B8E19F08A1B05ACB /* DiskCleanerCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BA46615DA7A71201FABD5BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54F9FDFE921FBC32230595D1 /* DiskCleanerCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E1705A5B8276108D7634743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B191739084B3DD65615631C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				759E28992579DB488262A9C3 /* DiskCleanerCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A3E27B8CA818264D75C8D81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				185A8156C61409C0F51D893B /* DiskCleanerCore.framework */,
+				510DF14090C0E8CCB6386535 /* DiskCleaner.app */,
+				EAFE91A6A0CCB3CBFB882CE6 /* DiskCleanerFunctionalPreview.app */,
+				E023763F09D1C832E2FF5AF0 /* disk-cleanerctl */,
+				8FF072383B21D9896E5BBC1C /* DiskCleanerCoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0D6E4079E36703EBD37C0072 = {
+			isa = PBXGroup;
+			children = (
+				0A3E27B8CA818264D75C8D81 /* Products */,
+				3152FA71F4DA052D4F267FBF /* DiskCleanerCore */,
+				68D66C1CD2D644A5E6D20237 /* DiskCleanerApp */,
+				61FC1A64A7F5F5BD1B71FB1B /* DiskCleanerCLI */,
+				E6AD58E887FDA53FEDF6934F /* DiskCleanerCoreTests */,
+			);
+			sourceTree = "<group>";
+		};
+		3152FA71F4DA052D4F267FBF /* DiskCleanerCore */ = {
+			isa = PBXGroup;
+			children = (
+				24D36FE1389FBC0AD401A2C4 /* StoreOperation.swift */,
+				8722FBC356274A2009C34F1F /* Preferences.swift */,
+				6256B7C269714336D00435C8 /* ManualTrash.swift */,
+				7D8E8FF34153F6D6040524AE /* InventoryBrowser.swift */,
+				D9E13D03D825D509EC8A58EB /* FilesystemIdentity.swift */,
+				FA30DD7DC9257D6263907F4F /* Comparison.swift */,
+				72790DD5BA108B54A07F45CF /* Inventory.swift */,
+				126EF9A7F724AFD4B5776A70 /* Jobs.swift */,
+				8214868D96900B0E8E27AF1D /* Models.swift */,
+				8BD0CED26AD7E9606DCB94DF /* Persistence.swift */,
+			);
+			name = DiskCleanerCore;
+			path = "../../Sources/DiskCleanerCore";
+			sourceTree = SOURCE_ROOT;
+		};
+		61FC1A64A7F5F5BD1B71FB1B /* DiskCleanerCLI */ = {
+			isa = PBXGroup;
+			children = (
+				378FA7B5548D6E78EB635525 /* main.swift */,
+			);
+			name = DiskCleanerCLI;
+			path = "../../Sources/DiskCleanerCLI";
+			sourceTree = SOURCE_ROOT;
+		};
+		68D66C1CD2D644A5E6D20237 /* DiskCleanerApp */ = {
+			isa = PBXGroup;
+			children = (
+				216F251EB5722D56CC453779 /* MotionFramesSettingsExitTab4.swift */,
+				D2722D963744474E4B9D4D5A /* MotionFramesSettingsExitTab3.swift */,
+				4B0F3AC9C05BBB68AE9A353C /* MotionFramesSettingsExitTab2.swift */,
+				D256F9200FC59DCDEF43B7F5 /* MotionFramesSettingsExitTab1.swift */,
+				F8A104112FD9CD8559298C6E /* MotionFramesSettingsExitTab.swift */,
+				579FCEFF37DA4C9799C0B8DE /* MotionFramesRowSelect4.swift */,
+				7DEADFA7C2A54C720CC2AE55 /* MotionFramesRowSelect3.swift */,
+				E87587ECEB1C4615EF5E99AB /* MotionFramesRowSelect2.swift */,
+				9649297ADE4AF3A6AAE9B8C2 /* MotionFramesRowSelect1.swift */,
+				FA3F578BC0A5A17706B32D17 /* MotionFramesRowSelect.swift */,
+				674617ECF0D8806F662CA0BC /* DiskCleanerSceneTrashOutcomePreview.swift */,
+				5223C7158B4B090931BD4AE7 /* DiskCleanerSceneTrashReviewPreview.swift */,
+				52B85E6A27A9ED6BADF8F611 /* DiskCleanerSceneSettingsPreview.swift */,
+				EF12E234EF122AD82D8EF89D /* DiskCleanerSceneScanningPreview.swift */,
+				18D601DFE09F1DE6C5F7F9E5 /* DiskCleanerSceneEmptyPreview.swift */,
+				F3C7AF366C8A31C9B7E271B5 /* DiskCleanerSceneBrowseTreePreview.swift */,
+				0CB4B9984215DEE567CC55C0 /* DiskCleanerSceneBrowsePreview.swift */,
+				5C46FE2F9A4C9AA19C8A9437 /* DiskCleanerSceneOverviewPreview.swift */,
+				E1DE65824024B7DC51AD73FC /* MotionFramesSettingsOpen4.swift */,
+				C9544E1AE2886CD499FE0AB1 /* MotionFramesSettingsOpen3.swift */,
+				A030AFF9B7331E58D29E99E4 /* MotionFramesSettingsOpen2.swift */,
+				9266D2C56E2C9F98E1CC5AB5 /* MotionFramesSettingsOpen1.swift */,
+				3510C6DBD2E41C4A776A099A /* MotionFramesSettingsOpen.swift */,
+				494C22E373C9753B65B04C0D /* MotionFramesRequestSwitch4.swift */,
+				63CB96D1CAF5F553D86629F0 /* MotionFramesRequestSwitch3.swift */,
+				E7CF5AB50D012094F0FFDB43 /* MotionFramesRequestSwitch2.swift */,
+				42F2CAB359EAA2BE047F3BD4 /* MotionFramesRequestSwitch1.swift */,
+				1305AD5BD44E6C836C8AD303 /* MotionFramesRequestSwitch.swift */,
+				183EC29FFF4698B526BB0BAD /* MotionFramesBannerExit4.swift */,
+				C55A9BC77BB478BB41BDAD47 /* MotionFramesBannerExit3.swift */,
+				8699CBE4F83ED22E96EFFF56 /* MotionFramesBannerExit2.swift */,
+				B40E071EE1725A99EF3F0FD0 /* MotionFramesBannerExit1.swift */,
+				A9648E14413D5F885E839BA4 /* MotionFramesBannerExit.swift */,
+				85DA213857536AFD5B6B4E28 /* MotionFramesReviewCancel4.swift */,
+				FE0EB4C7C7CB2682FAAC3431 /* MotionFramesReviewCancel3.swift */,
+				1C2884339DD4615EB13BC480 /* MotionFramesReviewCancel2.swift */,
+				408D2D0ECEE1F72885125743 /* MotionFramesReviewCancel1.swift */,
+				D789B132E78473ABC23D5EF1 /* MotionFramesReviewEnter4.swift */,
+				91B229C59ABE5918D02E4CED /* MotionFramesReviewEnter3.swift */,
+				DA0A852E0D9E47F736963DF0 /* MotionFramesReviewEnter2.swift */,
+				7DE331EB79B83065ABE7DB4E /* MotionFramesReviewEnter1.swift */,
+				6DC0221A527210B3F4C383E8 /* MotionFramesDisclosureClose4.swift */,
+				07919958C766609ED1CC47F8 /* MotionFramesDisclosureClose3.swift */,
+				14C1B11FAA1BB1D458E3CD2E /* MotionFramesDisclosureClose2.swift */,
+				DC5128BB38631DACC233B4F0 /* MotionFramesDisclosureClose1.swift */,
+				00637ECC7ADBD45F0ED6ADA9 /* MotionFramesDisclosureOpen4.swift */,
+				AB1C94837C3B1EDD270D6632 /* MotionFramesDisclosureOpen3.swift */,
+				5C82F69F94EE794C8137DABB /* MotionFramesDisclosureOpen2.swift */,
+				916ED5764A417EE1BCB86C86 /* MotionFramesDisclosureOpen1.swift */,
+				6AC10D46BBEAF56B600379B5 /* MotionFramesBack4.swift */,
+				E635ACBA651DAEC9B92ACA68 /* MotionFramesBack3.swift */,
+				65AFCA69CAA3A0B89F0F8A8D /* MotionFramesBack2.swift */,
+				6BE370A0A3343E17F46845ED /* MotionFramesBack1.swift */,
+				6870A023359878B49A5F7786 /* MotionFramesDrill4.swift */,
+				86639EF6F7117E38E4A7B38F /* MotionFramesDrill3.swift */,
+				E89B805BC8FD4D5777DA8E07 /* MotionFramesDrill2.swift */,
+				FEE607A37E6AE293EA77F980 /* MotionFramesDrill1.swift */,
+				30C79C70BEA750903EE149F4 /* MotionFramesTab4.swift */,
+				4C7D13E0DFCCC576D3974303 /* MotionFramesTab3.swift */,
+				EB84A581D87EE6CA9435E7B9 /* MotionFramesTab2.swift */,
+				5BF08E11A94F1F4AB9F66D98 /* MotionFramesTab1.swift */,
+				D65EFA2A35B928EB687EE4FD /* MotionFramesReviewCancel.swift */,
+				C46BD6167B5A858261925862 /* MotionFramesReviewEnter.swift */,
+				2D73C59CC92D31D3DCC9A885 /* MotionFramesDisclosureClose.swift */,
+				EDD0126422E23013A801536C /* MotionFramesDisclosureOpen.swift */,
+				E0C74035E1D8A825A42CCE24 /* MotionFramesBack.swift */,
+				06571ADB115B95F9AF58ACD7 /* MotionFramesDrill.swift */,
+				73F940C39109EA2EFC60A412 /* MotionFramesTab.swift */,
+				6D1CF50E927F08B9D9DA159E /* MotionFrameSupport.swift */,
+				7CF9343B33306646C61342F0 /* DiskCleanerCleanupPreview.swift */,
+				3AA558BB1F8BA9685008AFA8 /* DiskCleanerPreviews.swift */,
+				C56B3AD7A3ED5E2FE3BCD012 /* TrashViews.swift */,
+				D4C43AD197D309E78E0B2B8C /* SettingsView.swift */,
+				F5D64A34251CFA954C939F89 /* OverviewViews.swift */,
+				F69C39361273DFCF614F2908 /* Components.swift */,
+				B9AB66F92370C780CBBBB19F /* CleanupViews.swift */,
+				A4C6136BA49616B80A2E63D4 /* BrowseViews.swift */,
+				E0D7BD1DDA0EB8BF03D18403 /* TrashFlow.swift */,
+				CDE7B1F64D7CCB38ADC2FDE7 /* LaunchAndFormatting.swift */,
+				6DC82FB6482C03CE0589FFA4 /* FixtureData.swift */,
+				8C8BA42FB4B1556DC7A0EF6E /* CleanerModel.swift */,
+				9A4603D9309B5A1D00604408 /* DiskCleanerApp-Info.plist */,
+				91D1A55A7DF1FACD56D51E2B /* DiskCleanerApp.swift */,
+				E25E20EAC4CDF8806447B808 /* DiskCleanerAppearance.swift */,
+			);
+			name = DiskCleanerApp;
+			path = "../../Sources/DiskCleanerApp";
+			sourceTree = SOURCE_ROOT;
+		};
+		E6AD58E887FDA53FEDF6934F /* DiskCleanerCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				306652CBFAAD78C60C2920D6 /* AppModelFixtureTests.swift */,
+				61B5564DF0E454831B5FE260 /* ManualTrashTests.swift */,
+				B6E4A61C905A0D979BA4DEE6 /* FunctionalCoreTests.swift */,
+				6D1C9C6CB3B625138FA3FB76 /* CLIIntegrationTests.swift */,
+				CCBA4961D35EBAD1B0CE92D6 /* CoreTests.swift */,
+				62AD803D8418B158A2FF683D /* JobPersistenceTests.swift */,
+				8A90820FDC1EF76F13FC8A3F /* ScannerSafetyTests.swift */,
+			);
+			name = DiskCleanerCoreTests;
+			path = "../../Tests/DiskCleanerCoreTests";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4880A37AEA30D42CA67F068 /* DiskCleanerCLI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7959B9E67D4369C997760851 /* Build configuration list for PBXNativeTarget "DiskCleanerCLI" */;
+			buildPhases = (
+				DEFE864ED39614A65ECDD810 /* Sources */,
+				8B191739084B3DD65615631C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DD0C673719309C95E200361 /* PBXTargetDependency */,
+			);
+			name = DiskCleanerCLI;
+			productName = "disk-cleanerctl";
+			productReference = E023763F09D1C832E2FF5AF0 /* disk-cleanerctl */;
+			productType = "com.apple.product-type.tool";
+		};
+		D7B4E5729325BEDEEF2A6DDA /* DiskCleanerCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D50E0D9064E1695261C37B89 /* Build configuration list for PBXNativeTarget "DiskCleanerCore" */;
+			buildPhases = (
+				210104056D67B993010C2EA8 /* Sources */,
+				5E1705A5B8276108D7634743 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DiskCleanerCore;
+			productName = DiskCleanerCore;
+			productReference = 185A8156C61409C0F51D893B /* DiskCleanerCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E5AA02761B8860426438F755 /* DiskCleanerApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8F40F893866D32CA3C99835 /* Build configuration list for PBXNativeTarget "DiskCleanerApp" */;
+			buildPhases = (
+				5FE1A741A795B038ECEEAA40 /* Sources */,
+				457D9E1009B281B5E68915CB /* Frameworks */,
+				275C6E3FA4AF2ADDC9B81D4B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E93B2A26A9472EF645C6E55 /* PBXTargetDependency */,
+			);
+			name = DiskCleanerApp;
+			productName = DiskCleaner;
+			productReference = 510DF14090C0E8CCB6386535 /* DiskCleaner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED098B483AF0566ABED3A4F0 /* DiskCleanerFunctionalPreview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D52DC6AB0455A86293CCE394 /* Build configuration list for PBXNativeTarget "DiskCleanerFunctionalPreview" */;
+			buildPhases = (
+				CA7695C75E776178B1A4CE02 /* Sources */,
+				1BA46615DA7A71201FABD5BB /* Frameworks */,
+				7B5F09F33EA9198C2AB15258 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B51F7F5DC8EC68EEF192B84E /* PBXTargetDependency */,
+			);
+			name = DiskCleanerFunctionalPreview;
+			productName = DiskCleanerFunctionalPreview;
+			productReference = EAFE91A6A0CCB3CBFB882CE6 /* DiskCleanerFunctionalPreview.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E66285F4FDB423C77731F6C4 /* DiskCleanerCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBFBC073C25D3BB00951C25E /* Build configuration list for PBXNativeTarget "DiskCleanerCoreTests" */;
+			buildPhases = (
+				689FAD115BADB30388EC0622 /* Sources */,
+				1C2D05BB86095B8FF3B9F29A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				679A65EBF59ABEE14E46130D /* PBXTargetDependency */,
+			);
+			name = DiskCleanerCoreTests;
+			productName = DiskCleanerCoreTests;
+			productReference = 8FF072383B21D9896E5BBC1C /* DiskCleanerCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		244210E48437B6556980A702 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2700;
+			};
+			buildConfigurationList = AAB2723FF2C8E6D1C298C1E4 /* Build configuration list for PBXProject "DiskCleanerHost" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0D6E4079E36703EBD37C0072;
+			productRefGroup = 0A3E27B8CA818264D75C8D81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7B4E5729325BEDEEF2A6DDA /* DiskCleanerCore */,
+				E5AA02761B8860426438F755 /* DiskCleanerApp */,
+				ED098B483AF0566ABED3A4F0 /* DiskCleanerFunctionalPreview */,
+				C4880A37AEA30D42CA67F068 /* DiskCleanerCLI */,
+				E66285F4FDB423C77731F6C4 /* DiskCleanerCoreTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		210104056D67B993010C2EA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CD2073714DBC64AAC153D10 /* StoreOperation.swift in Sources */,
+				54D009ABAFDE27D1A900CF88 /* Preferences.swift in Sources */,
+				39A48681B44526EEEDCCFFFB /* ManualTrash.swift in Sources */,
+				E1375A02319FC02AE30D77EB /* InventoryBrowser.swift in Sources */,
+				2FDD769616BF1D34C29CCB0B /* FilesystemIdentity.swift in Sources */,
+				5FAECB0E94D2A06B10FB844A /* Comparison.swift in Sources */,
+				63454E024B0E3B9C152C0036 /* Inventory.swift in Sources */,
+				EB4F46C3D02562CA7668EC27 /* Jobs.swift in Sources */,
+				A4D0B0FE6D627E5E19E1CE5D /* Models.swift in Sources */,
+				959A9670C58ECBE4B6DF9702 /* Persistence.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FE1A741A795B038ECEEAA40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				636DAE0C2B9D9275C83568F0 /* MotionFramesSettingsExitTab4.swift in Sources */,
+				9E20463ECC844806B1431C3E /* MotionFramesSettingsExitTab3.swift in Sources */,
+				BBD33260E56B1D5E1EFA8447 /* MotionFramesSettingsExitTab2.swift in Sources */,
+				BEE6FAFD6E9C3BF1450812B2 /* MotionFramesSettingsExitTab1.swift in Sources */,
+				98A8651731EF682553335309 /* MotionFramesSettingsExitTab.swift in Sources */,
+				C28EC1759CD29EF005B5C343 /* MotionFramesRowSelect4.swift in Sources */,
+				67890F82DAE25A0586C6E3C1 /* MotionFramesRowSelect3.swift in Sources */,
+				AA4DD8D465441BC5C94526F8 /* MotionFramesRowSelect2.swift in Sources */,
+				7C1E2C5DAE93E12B7E866819 /* MotionFramesRowSelect1.swift in Sources */,
+				5DEECCC1BDD55C53FD30E424 /* MotionFramesRowSelect.swift in Sources */,
+				211F89A33D4E1F887B1451ED /* DiskCleanerSceneTrashOutcomePreview.swift in Sources */,
+				DC51CBFE94DF6854818AD7FB /* DiskCleanerSceneTrashReviewPreview.swift in Sources */,
+				4D597FE982A82CEF2A5CA606 /* DiskCleanerSceneSettingsPreview.swift in Sources */,
+				2F49A364E272A548F758BC97 /* DiskCleanerSceneScanningPreview.swift in Sources */,
+				B4C2FD512AC380DF5F1CCED1 /* DiskCleanerSceneEmptyPreview.swift in Sources */,
+				90CDA005E0DE72D320BF5104 /* DiskCleanerSceneBrowseTreePreview.swift in Sources */,
+				83F44A1E58C8025F53596B23 /* DiskCleanerSceneBrowsePreview.swift in Sources */,
+				4393DCCEA06BC69A262AA5C8 /* DiskCleanerSceneOverviewPreview.swift in Sources */,
+				0713DB9C99DDBD85D02E7259 /* MotionFramesSettingsOpen4.swift in Sources */,
+				60D38B56A66291CC5E7EFDD4 /* MotionFramesSettingsOpen3.swift in Sources */,
+				04AC3FBA8ABFBF457777AA85 /* MotionFramesSettingsOpen2.swift in Sources */,
+				67063C0C9DB671C66B4CC772 /* MotionFramesSettingsOpen1.swift in Sources */,
+				0E5768A7E63224B24CD13C18 /* MotionFramesSettingsOpen.swift in Sources */,
+				E3EC7CC5160E553112352FCC /* MotionFramesRequestSwitch4.swift in Sources */,
+				BFDD1482624022DEDFD0138B /* MotionFramesRequestSwitch3.swift in Sources */,
+				23C720F37F473050BF72E28C /* MotionFramesRequestSwitch2.swift in Sources */,
+				BFB31EBA2E4EB5BA8D13E920 /* MotionFramesRequestSwitch1.swift in Sources */,
+				FBFBAB518715895D564A97B8 /* MotionFramesRequestSwitch.swift in Sources */,
+				41DAB929A5FFC5E480F46C9A /* MotionFramesBannerExit4.swift in Sources */,
+				38F72D6E2A5D46103628FD0E /* MotionFramesBannerExit3.swift in Sources */,
+				0E6CB9DCF97B7B43FB06F4AD /* MotionFramesBannerExit2.swift in Sources */,
+				1FF504FCF5574CD6D6357328 /* MotionFramesBannerExit1.swift in Sources */,
+				5F3A1F524ECFFF44E1F8A4D7 /* MotionFramesBannerExit.swift in Sources */,
+				B09704B0837CD4CD408AD1AF /* MotionFramesReviewCancel4.swift in Sources */,
+				813B3BBDBFBB152C663C1A2C /* MotionFramesReviewCancel3.swift in Sources */,
+				FB12E3D06627913C5D78FA85 /* MotionFramesReviewCancel2.swift in Sources */,
+				37988060F2D9DBBB4ECBCDAE /* MotionFramesReviewCancel1.swift in Sources */,
+				08F2AA6A5AB51838FFFF1727 /* MotionFramesReviewEnter4.swift in Sources */,
+				E971EFF3BAE6ED7D78CEA51D /* MotionFramesReviewEnter3.swift in Sources */,
+				F434D92BDC8A0A24B4FE146B /* MotionFramesReviewEnter2.swift in Sources */,
+				93E51C8F2B3970D6E1F476C6 /* MotionFramesReviewEnter1.swift in Sources */,
+				E2D03AA391C7497A96CBD21B /* MotionFramesDisclosureClose4.swift in Sources */,
+				8C73159CE45677C38F8D4A02 /* MotionFramesDisclosureClose3.swift in Sources */,
+				A085648F555EBE23EF374A01 /* MotionFramesDisclosureClose2.swift in Sources */,
+				9441A3FCB9650C67D3F0982E /* MotionFramesDisclosureClose1.swift in Sources */,
+				2BFA5F856D97F75DB814D14D /* MotionFramesDisclosureOpen4.swift in Sources */,
+				F30AFD2D000602381B322EDA /* MotionFramesDisclosureOpen3.swift in Sources */,
+				7F6AD4ACD1BCC4EE1F41B05D /* MotionFramesDisclosureOpen2.swift in Sources */,
+				198720E1C0C7E1759EFBBC02 /* MotionFramesDisclosureOpen1.swift in Sources */,
+				00F54F16C2D9130F06678FAE /* MotionFramesBack4.swift in Sources */,
+				7F3CE2DF408343ECDA777A8B /* MotionFramesBack3.swift in Sources */,
+				13047C6203938036AA0E94E9 /* MotionFramesBack2.swift in Sources */,
+				C1D0B8919737B4EA790C41F2 /* MotionFramesBack1.swift in Sources */,
+				D6538EE8FC6B00BE53A8639D /* MotionFramesDrill4.swift in Sources */,
+				F566DC01C549EDC4A30C87B5 /* MotionFramesDrill3.swift in Sources */,
+				51288D735DA9B3C66378CD1C /* MotionFramesDrill2.swift in Sources */,
+				5C2F9885C17B07FFC64BB1B5 /* MotionFramesDrill1.swift in Sources */,
+				75F55A54C86CE4B84AEF4790 /* MotionFramesTab4.swift in Sources */,
+				4601F8A63F69801B904B7D9A /* MotionFramesTab3.swift in Sources */,
+				902485889869C49E434B78D3 /* MotionFramesTab2.swift in Sources */,
+				DA5A74C1A6C17A9FB07FB7C5 /* MotionFramesTab1.swift in Sources */,
+				B2D0C36D52A6CF53D6FBFC1B /* MotionFramesReviewCancel.swift in Sources */,
+				A77D8181C9BD393A7B3C762C /* MotionFramesReviewEnter.swift in Sources */,
+				0E798E8C30D54C7E480AA27C /* MotionFramesDisclosureClose.swift in Sources */,
+				00F569BE8C027FB4B2FD5EE0 /* MotionFramesDisclosureOpen.swift in Sources */,
+				A716CCC752B397733BCFD951 /* MotionFramesBack.swift in Sources */,
+				6A61DBD8CA9C882B284950C2 /* MotionFramesDrill.swift in Sources */,
+				78E0F46C8144F78312B605A4 /* MotionFramesTab.swift in Sources */,
+				67F45EDE1CDC71C59B647BEC /* MotionFrameSupport.swift in Sources */,
+				60C04550BD11DB4E1E5A799B /* DiskCleanerCleanupPreview.swift in Sources */,
+				C09292B3FE146FA2E44AA979 /* DiskCleanerPreviews.swift in Sources */,
+				FF8FEE6EDFCBE4C2A53187EC /* TrashViews.swift in Sources */,
+				EC3871F3C0A9C6AC6616CC2B /* SettingsView.swift in Sources */,
+				58F6948C0409462CB7FF7272 /* OverviewViews.swift in Sources */,
+				CD055F934848453C3A1B54C3 /* Components.swift in Sources */,
+				319389BCF050237C8D68EBBF /* CleanupViews.swift in Sources */,
+				C1F2B43DDEB362C392DBB66A /* BrowseViews.swift in Sources */,
+				B1C0BA213A6BE8EBFB3BE5E8 /* TrashFlow.swift in Sources */,
+				696EFCB0C31B02A9B99E21A8 /* LaunchAndFormatting.swift in Sources */,
+				7DB444898E77856CB8E32383 /* FixtureData.swift in Sources */,
+				7C7AB0119D609E019A89C655 /* CleanerModel.swift in Sources */,
+				F4A91EBA5369B0ED860EC94A /* DiskCleanerApp.swift in Sources */,
+				63477D55E13905E5873A52EB /* DiskCleanerAppearance.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA7695C75E776178B1A4CE02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5314D05739AD0BEFF0A1EA /* MotionFramesSettingsExitTab4.swift in Sources */,
+				A9FADC661C28F0F014BCEC16 /* MotionFramesSettingsExitTab3.swift in Sources */,
+				44D2BD714649C8B981BA34B8 /* MotionFramesSettingsExitTab2.swift in Sources */,
+				6C51A7DF7B23FF65C11BD370 /* MotionFramesSettingsExitTab1.swift in Sources */,
+				24293BE5B99DC33DE9E7A022 /* MotionFramesSettingsExitTab.swift in Sources */,
+				13D385FD42ED3EBA5130BAD2 /* MotionFramesRowSelect4.swift in Sources */,
+				53580CF20B1CB0C2321E5DF7 /* MotionFramesRowSelect3.swift in Sources */,
+				9B0A8042B5B320849F613B75 /* MotionFramesRowSelect2.swift in Sources */,
+				256AF39E55463F219927BBE0 /* MotionFramesRowSelect1.swift in Sources */,
+				388FB35DEA5D393E3DBB4E90 /* MotionFramesRowSelect.swift in Sources */,
+				0389FD90815539C8E650399E /* DiskCleanerSceneTrashOutcomePreview.swift in Sources */,
+				DA96837532F09B7EF2B2EA0C /* DiskCleanerSceneTrashReviewPreview.swift in Sources */,
+				23899AC9D37F6643619F6792 /* DiskCleanerSceneSettingsPreview.swift in Sources */,
+				DCAE89FA2732F1E91ABE17B6 /* DiskCleanerSceneScanningPreview.swift in Sources */,
+				E694700F217ADAED9B2DF179 /* DiskCleanerSceneEmptyPreview.swift in Sources */,
+				2C95D0C2FA38B38522FB3697 /* DiskCleanerSceneBrowseTreePreview.swift in Sources */,
+				2F5A71A6DC9548F5FF00DA6D /* DiskCleanerSceneBrowsePreview.swift in Sources */,
+				8FAC6E7A1D8C9FA35F82AFE4 /* DiskCleanerSceneOverviewPreview.swift in Sources */,
+				19BA617E9B5C77929DF2E57A /* MotionFramesSettingsOpen4.swift in Sources */,
+				FBCA6BAC162D8997505F7D6D /* MotionFramesSettingsOpen3.swift in Sources */,
+				A0A6EA6409B45F0439B41ED1 /* MotionFramesSettingsOpen2.swift in Sources */,
+				26DE31E68C6C9DD6BC7E332F /* MotionFramesSettingsOpen1.swift in Sources */,
+				5C25FE2908DEF18D247F1E83 /* MotionFramesSettingsOpen.swift in Sources */,
+				6278F5339FD79AC3B46466EE /* MotionFramesRequestSwitch4.swift in Sources */,
+				CD63DE48C47B4E697182F93F /* MotionFramesRequestSwitch3.swift in Sources */,
+				A8F85D90F23973A8A7B0DA04 /* MotionFramesRequestSwitch2.swift in Sources */,
+				65567B6C7C1B40133E607DA9 /* MotionFramesRequestSwitch1.swift in Sources */,
+				6FFE6CD2BFA5A54802A5712F /* MotionFramesRequestSwitch.swift in Sources */,
+				743BBF2D20D34953C92CEA44 /* MotionFramesBannerExit4.swift in Sources */,
+				B5463E0250282FCC201C3B1A /* MotionFramesBannerExit3.swift in Sources */,
+				9989475EFA3BF82C788C726F /* MotionFramesBannerExit2.swift in Sources */,
+				B2764BCA1DB5F346F76A788A /* MotionFramesBannerExit1.swift in Sources */,
+				7690AB451BFF18258F6B5684 /* MotionFramesBannerExit.swift in Sources */,
+				3EFDF7E7356B630832A27255 /* MotionFramesReviewCancel4.swift in Sources */,
+				E4ABC5FDB7EC17D9D4621558 /* MotionFramesReviewCancel3.swift in Sources */,
+				B5E308E13C2BC33877216AA5 /* MotionFramesReviewCancel2.swift in Sources */,
+				EE8BF85A89D82EF809EAF083 /* MotionFramesReviewCancel1.swift in Sources */,
+				2F073C0C3C8A9F6D6353B4D3 /* MotionFramesReviewEnter4.swift in Sources */,
+				2856A048F949E88784C6D20E /* MotionFramesReviewEnter3.swift in Sources */,
+				F1943CD558F1AD135DFCB85E /* MotionFramesReviewEnter2.swift in Sources */,
+				53DB992CAC1260830A344697 /* MotionFramesReviewEnter1.swift in Sources */,
+				C55CF5C2AE51EE108D53E93A /* MotionFramesDisclosureClose4.swift in Sources */,
+				E49CC2744A65A712CE3439F9 /* MotionFramesDisclosureClose3.swift in Sources */,
+				D061E25E1D212337D1114EF3 /* MotionFramesDisclosureClose2.swift in Sources */,
+				62CFC9D1E68E3C221780F750 /* MotionFramesDisclosureClose1.swift in Sources */,
+				8F44738CA54B6C734E82D902 /* MotionFramesDisclosureOpen4.swift in Sources */,
+				801B9B18C6B0D9C103C5F30E /* MotionFramesDisclosureOpen3.swift in Sources */,
+				613C5BB6BBA9922E1F18BECE /* MotionFramesDisclosureOpen2.swift in Sources */,
+				5F6FC6D7FE43141742B75345 /* MotionFramesDisclosureOpen1.swift in Sources */,
+				90D34C335FA40B38C5CCB4B2 /* MotionFramesBack4.swift in Sources */,
+				C8EA4B4CFA8AD86FC430759E /* MotionFramesBack3.swift in Sources */,
+				B595F5B0CF56442352C5893A /* MotionFramesBack2.swift in Sources */,
+				CE6F27F3BD633943C3A898F4 /* MotionFramesBack1.swift in Sources */,
+				59DDCEDEB4DFCBD36DAA5ADB /* MotionFramesDrill4.swift in Sources */,
+				32DD98466D025674F4BE81E2 /* MotionFramesDrill3.swift in Sources */,
+				00F6587AD118ED0BF27288C5 /* MotionFramesDrill2.swift in Sources */,
+				E7C55240EE2ECC784CFBB824 /* MotionFramesDrill1.swift in Sources */,
+				BA23662B5AB5735A509B1BAB /* MotionFramesTab4.swift in Sources */,
+				ACD7C925B45CCA60E324B569 /* MotionFramesTab3.swift in Sources */,
+				2087857975F0156FC51A2603 /* MotionFramesTab2.swift in Sources */,
+				C6F4117978B0889739382562 /* MotionFramesTab1.swift in Sources */,
+				33277CE86F07405DB2AF8A82 /* MotionFramesReviewCancel.swift in Sources */,
+				F78ED1DE388844D0049411FA /* MotionFramesReviewEnter.swift in Sources */,
+				DA1FC5011614C87CFA271E31 /* MotionFramesDisclosureClose.swift in Sources */,
+				CBB106CD0895172120AEEE8C /* MotionFramesDisclosureOpen.swift in Sources */,
+				EDEF72F624840FDDAEF9AD32 /* MotionFramesBack.swift in Sources */,
+				2C7250486A7E5854DEA40525 /* MotionFramesDrill.swift in Sources */,
+				454E2AFDB98AAE7ECD40C68D /* MotionFramesTab.swift in Sources */,
+				E6994B35A43DB40680BC8493 /* MotionFrameSupport.swift in Sources */,
+				CF6DBB76B7D6038F8F7C751B /* DiskCleanerCleanupPreview.swift in Sources */,
+				1FC353F0D696AE370A6BF171 /* DiskCleanerPreviews.swift in Sources */,
+				39331B9DE34A37735BEE8105 /* TrashViews.swift in Sources */,
+				4FC59B74F678151049BFB7CB /* SettingsView.swift in Sources */,
+				2489E358551B4F09C6EC88A2 /* OverviewViews.swift in Sources */,
+				870E274F0154DADDA79140B1 /* Components.swift in Sources */,
+				C88E619F1C4489AB927DE980 /* CleanupViews.swift in Sources */,
+				356E4C6001292A0CF227EB4E /* BrowseViews.swift in Sources */,
+				94D348222870B01DC27ECBB9 /* TrashFlow.swift in Sources */,
+				2C1CF3CC0ED7A3FCC55871C7 /* LaunchAndFormatting.swift in Sources */,
+				E7B1DE6F1F6DB7424CDE22B7 /* FixtureData.swift in Sources */,
+				415690829BDF7589FFBFE549 /* CleanerModel.swift in Sources */,
+				08FB2CD633E40EF9B75E0A2F /* DiskCleanerApp.swift in Sources */,
+				657170EC1E5B899AC16D0900 /* DiskCleanerAppearance.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689FAD115BADB30388EC0622 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				230DE9CC089EE9FA9E0FE664 /* CleanerModel.swift in Sources */,
+				E620A669074C3CE0C871EFDC /* FixtureData.swift in Sources */,
+				262C74C992311247879FBB64 /* LaunchAndFormatting.swift in Sources */,
+				787457E21BFE3BB5E174BCF4 /* TrashFlow.swift in Sources */,
+				A5103CE353C8CE275CFD06BA /* AppModelFixtureTests.swift in Sources */,
+				E2FB9B3A7146068C102F1858 /* ManualTrashTests.swift in Sources */,
+				77A234CAC1BD5C8E89AEA308 /* FunctionalCoreTests.swift in Sources */,
+				E62C6400A26B258422D6A16E /* CLIIntegrationTests.swift in Sources */,
+				64D28C9E2EE1ABC45BF1AB72 /* CoreTests.swift in Sources */,
+				C28C858FE9121100CB670186 /* JobPersistenceTests.swift in Sources */,
+				CA40E4AA6187869AF52422D8 /* ScannerSafetyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEFE864ED39614A65ECDD810 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14BA64A44E389EF6125856BC /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		679A65EBF59ABEE14E46130D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7B4E5729325BEDEEF2A6DDA /* DiskCleanerCore */;
+			targetProxy = 9A4603D8309B597E00604408 /* PBXContainerItemProxy */;
+		};
+		7DD0C673719309C95E200361 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7B4E5729325BEDEEF2A6DDA /* DiskCleanerCore */;
+			targetProxy = 9A4603D7309B597E00604408 /* PBXContainerItemProxy */;
+		};
+		8E93B2A26A9472EF645C6E55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7B4E5729325BEDEEF2A6DDA /* DiskCleanerCore */;
+			targetProxy = 9A4603D6309B597E00604408 /* PBXContainerItemProxy */;
+		};
+		B51F7F5DC8EC68EEF192B84E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7B4E5729325BEDEEF2A6DDA /* DiskCleanerCore */;
+			targetProxy = 12CD33D9F04CC8D9D1DCD07E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		089D502882F9E4F78C1D261B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTABILITY = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path",
+					"@loader_path/../../..",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aikongen.diskcleaner.tests;
+				PRODUCT_NAME = DiskCleanerCoreTests;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "";
+			};
+			name = Release;
+		};
+		0B0C687DF8B6B8DC790B519C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTABILITY = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path",
+					"@loader_path/../../..",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		220AF8C4451FB7D67131D04F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path",
+					"@loader_path/../../..",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aikongen.diskcleaner.core;
+				PRODUCT_NAME = DiskCleanerCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		482C7C2CABACE438616BA7C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path",
+					"@loader_path/../../..",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -parse-as-library";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aikongen.diskcleaner.cli;
+				PRODUCT_NAME = "disk-cleanerctl";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		5C86A12013D3BDEFE24BA498 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path",
+					"@loader_path/../../..",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aikongen.diskcleaner.tests;
+				PRODUCT_NAME = DiskCleanerCoreTests;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "";
+			};
+			name = Debug;
+		};
+		6699A61BC144BC7068789300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_DEBUG_DYLIB = YES;
+				ENABLE_TESTABILITY = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DiskCleanerApp-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Disk Cleaner";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Aikongen";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path",
+					"@loader_path/../../..",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aikongen.diskcleaner;
+				PRODUCT_NAME = DiskCleaner;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		058E4ADC624E88F447EB7720 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_DEBUG_DYLIB = YES;
+				ENABLE_TESTABILITY = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = "DiskCleanerFunctionalPreview-Info.plist";
+				INFOPLIST_FILE = "DiskCleanerFunctionalPreview-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Disk Cleaner Functional Preview";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Aikongen";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path",
+					"@loader_path/../../..",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aikongen.diskcleaner.preview;
+				PRODUCT_NAME = DiskCleanerFunctionalPreview;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		73EBF6644258C120893E685D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path",
+					"@loader_path/../../..",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		79A649ED57AD4C8EEDE90286 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path",
+					"@loader_path/../../..",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aikongen.diskcleaner.core;
+				PRODUCT_NAME = DiskCleanerCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		9C42E75C6504B8785CEFFF65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_DEBUG_DYLIB = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DiskCleanerApp-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Disk Cleaner";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Aikongen";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path",
+					"@loader_path/../../..",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aikongen.diskcleaner;
+				PRODUCT_NAME = DiskCleaner;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		0AABCB188EBB643CB71DBFDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_DEBUG_DYLIB = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = "DiskCleanerFunctionalPreview-Info.plist";
+				INFOPLIST_FILE = "DiskCleanerFunctionalPreview-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Disk Cleaner Functional Preview";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Aikongen";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path",
+					"@loader_path/../../..",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aikongen.diskcleaner.preview;
+				PRODUCT_NAME = DiskCleanerFunctionalPreview;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		9F70B7AA19FC2167DDC21DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTABILITY = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path",
+					"@loader_path/../../..",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -parse-as-library";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aikongen.diskcleaner.cli;
+				PRODUCT_NAME = "disk-cleanerctl";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7959B9E67D4369C997760851 /* Build configuration list for PBXNativeTarget "DiskCleanerCLI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				482C7C2CABACE438616BA7C0 /* Debug */,
+				9F70B7AA19FC2167DDC21DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AAB2723FF2C8E6D1C298C1E4 /* Build configuration list for PBXProject "DiskCleanerHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73EBF6644258C120893E685D /* Debug */,
+				0B0C687DF8B6B8DC790B519C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BBFBC073C25D3BB00951C25E /* Build configuration list for PBXNativeTarget "DiskCleanerCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C86A12013D3BDEFE24BA498 /* Debug */,
+				089D502882F9E4F78C1D261B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D50E0D9064E1695261C37B89 /* Build configuration list for PBXNativeTarget "DiskCleanerCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79A649ED57AD4C8EEDE90286 /* Debug */,
+				220AF8C4451FB7D67131D04F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F8F40F893866D32CA3C99835 /* Build configuration list for PBXNativeTarget "DiskCleanerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C42E75C6504B8785CEFFF65 /* Debug */,
+				6699A61BC144BC7068789300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D52DC6AB0455A86293CCE394 /* Build configuration list for PBXNativeTarget "DiskCleanerFunctionalPreview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AABCB188EBB643CB71DBFDB /* Debug */,
+				058E4ADC624E88F447EB7720 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 244210E48437B6556980A702 /* Project object */;
+}
