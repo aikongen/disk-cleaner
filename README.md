@@ -50,8 +50,8 @@ Screenshots show the built-in preview with example data.
 
 ## Get it
 
-1. Download the latest `DiskCleaner-vX.Y.Z.zip` from the [releases page](https://github.com/aikongen/disk-cleaner/releases).
-2. Unzip it and move `Disk Cleaner.app` to your Applications folder. The zip also holds `Disk Cleaner Preview.app`, which shows every screen with example data and cannot touch your disk.
+1. Download the latest `DiskCleaner-vX.Y.Z.dmg` from the [releases page](https://github.com/aikongen/disk-cleaner/releases), open it and drag Disk Cleaner to Applications. The `DiskCleaner-vX.Y.Z.zip` is the alternative.
+2. The disk image and the zip also hold `Disk Cleaner Preview.app`, which shows every screen with example data and cannot touch your disk.
 3. The app is ad-hoc signed and not notarized, so macOS blocks the first open. Right-click the app and choose **Open**, then confirm. Or open **System Settings > Privacy & Security** and choose **Open Anyway**.
 
 Needs macOS 14 or later. It has been built and tested only on Apple silicon.

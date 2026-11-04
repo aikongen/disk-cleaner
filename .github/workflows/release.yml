@@ -13,8 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: swift --version
-      - name: Build, test and sign both apps (ad-hoc)
-        run: scripts/build-and-package.sh
+      - name: Build, test, sign both apps (ad-hoc) and make the DMG
+        env:
+          DISK_CLEANER_VERSION: ${{ github.ref_name }}
+        run: |
+          DISK_CLEANER_VERSION="${DISK_CLEANER_VERSION#v}" scripts/build-and-package.sh
       - name: Zip and checksum
         env:
           TAG: ${{ github.ref_name }}
@@ -38,8 +41,9 @@ jobs:
             echo
             echo '```sh'
             echo "gh release download $TAG -R ${{ github.repository }} -p 'DiskCleaner-*'"
-            echo "shasum -a 256 -c DiskCleaner-$TAG.zip.sha256"
-            echo "unzip DiskCleaner-$TAG.zip"
+            echo "shasum -a 256 -c DiskCleaner-$TAG.dmg.sha256"
+            echo "open DiskCleaner-$TAG.dmg   # then drag Disk Cleaner to Applications"
+            echo "# or: shasum -a 256 -c DiskCleaner-$TAG.zip.sha256 && unzip DiskCleaner-$TAG.zip"
             echo '```'
             echo
             echo "A browser download is quarantined; remove it with \`xattr -dr com.apple.quarantine \"Disk Cleaner.app\"\` if you trust this build."
@@ -52,4 +56,5 @@ jobs:
           prerelease=""
           case "$TAG" in v0.*) prerelease="--prerelease" ;; esac
           gh release create "$TAG" $prerelease --title "Disk Cleaner ${TAG#v}" --notes-file release-notes.md \
-            "artifacts/DiskCleaner-$TAG.zip" "artifacts/DiskCleaner-$TAG.zip.sha256"
+            "artifacts/DiskCleaner-$TAG.zip" "artifacts/DiskCleaner-$TAG.zip.sha256" \
+            "artifacts/DiskCleaner-$TAG.dmg" "artifacts/DiskCleaner-$TAG.dmg.sha256"

@@ -3,6 +3,7 @@ set -euo pipefail
 
 PACKAGE_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DIST_DIR="${1:-$PACKAGE_ROOT/artifacts}"
+VERSION="${DISK_CLEANER_VERSION:-0.1.0}"
 
 case "$(uname -s)" in
   Darwin) ;;
@@ -38,7 +39,7 @@ write_info_plist() {
   <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
   <key>CFBundleName</key><string>$bundle_name</string>
   <key>CFBundlePackageType</key><string>APPL</string>
-  <key>CFBundleShortVersionString</key><string>0.1.0</string>
+  <key>CFBundleShortVersionString</key><string>$VERSION</string>
   <key>CFBundleVersion</key><string>1</string>
   <key>LSMinimumSystemVersion</key><string>14.0</string>
   <key>NSHighResolutionCapable</key><true/>
@@ -81,6 +82,24 @@ package_app() {
 
 package_app "Disk Cleaner" "com.aikongen.diskcleaner" false
 package_app "Disk Cleaner Preview" "com.aikongen.diskcleaner.preview" true
+
+# Drag-to-install disk image: both apps plus an Applications link, compressed and read-only.
+DMG_PATH="$DIST_DIR/DiskCleaner-v$VERSION.dmg"
+DMG_STAGE="$(mktemp -d "$DIST_DIR/.dmg.XXXXXX")"
+DMG_RW="$DMG_STAGE/rw.dmg"
+cp -R "$DIST_DIR/Disk Cleaner.app" "$DIST_DIR/Disk Cleaner Preview.app" "$DMG_STAGE/"
+ln -s /Applications "$DMG_STAGE/Applications"
+cp "$PACKAGE_ROOT/assets/icon/DiskCleaner.icns" "$DMG_STAGE/.VolumeIcon.icns"
+hdiutil create -quiet -volname "Disk Cleaner" -srcfolder "$DMG_STAGE" -fs HFS+ -format UDRW -ov "$DMG_RW"
+DMG_MOUNT="$DMG_STAGE/mount"
+mkdir "$DMG_MOUNT"
+hdiutil attach -quiet -nobrowse -noverify -mountpoint "$DMG_MOUNT" "$DMG_RW"
+if command -v SetFile >/dev/null 2>&1; then SetFile -a C "$DMG_MOUNT" || true; fi
+hdiutil detach -quiet "$DMG_MOUNT"
+rm -f "$DMG_PATH"
+hdiutil convert -quiet "$DMG_RW" -format UDZO -imagekey zlib-level=9 -o "$DMG_PATH"
+rm -rf "$DMG_STAGE"
+(cd "$DIST_DIR" && shasum -a 256 "DiskCleaner-v$VERSION.dmg" > "DiskCleaner-v$VERSION.dmg.sha256")
 
 (
   cd "$PACKAGE_ROOT"

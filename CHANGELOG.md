@@ -4,6 +4,7 @@ This file records user-visible changes. The format follows [Keep a Changelog](ht
 
 ## Unreleased
 
+- Releases include a drag-to-install `.dmg` beside the zip.
 - README rewritten for people who download the app; build instructions moved to the maintainer guide.
 
 ## 0.1.0 - 2026-11-04
