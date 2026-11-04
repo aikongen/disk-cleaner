@@ -12,15 +12,20 @@ For the person using Disk Cleaner on their own Mac, for an agent calling its com
 
 ## How-to guides
 
+- [Find items and move them to the Trash](how-to/browse-and-trash.md) browses a saved scan, checks items and moves them after a review.
+- [Change settings and read Cleanups](how-to/settings.md) sets how many scans are kept and lists agent requests.
 - [Publish a release](how-to/release.md) tags a version and checks the download checksum (maintainer).
 
 ## Explanation
 
+- [What Disk Cleaner does](explanation/what-it-does.md) says what it shows, what you can do and what it never does.
+- [Limits and your data](explanation/limits.md) says what is stored and what is not promised.
 - [Architecture and quality path](explanation/architecture-and-readiness.md) says how the parts fit and what must improve next (maintainer).
 - [Appearance](explanation/appearance.md) covers the window atmosphere and the colour rules (maintainer).
 
 ## Reference
 
+- [Keyboard shortcuts](reference/keyboard-shortcuts.md) lists the keys the app defines.
 - [Automation contract](reference/automation-contract.md) lists the `disk-cleanerctl` commands, JSON fields and statuses.
 
 ## Maintainer

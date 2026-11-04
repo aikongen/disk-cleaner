@@ -4,6 +4,7 @@ This file records user-visible changes. The format follows [Keep a Changelog](ht
 
 ## Unreleased
 
+- Help menu opens a searchable Help Book generated from the docs, with What's new and Keyboard shortcuts.
 - Releases include a drag-to-install `.dmg` beside the zip.
 - README rewritten for people who download the app; build instructions moved to the maintainer guide.
 - Removed the Teal appearance option; the app has one violet atmosphere.

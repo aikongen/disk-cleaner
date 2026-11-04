@@ -19,6 +19,7 @@ struct DiskCleanerApplication: App {
             CommandGroup(replacing: .appSettings) {
                 Button("Settings…") { model.openSettingsPage() }.keyboardShortcut(",", modifiers: .command)
             }
+            HelpCommands()
         }
     }
 }
@@ -214,5 +215,24 @@ struct ScanControls: View {
                 Text(reason).font(.system(size: 11)).foregroundStyle(Paint.secondary)
             }
         }.font(.system(size: 12))
+    }
+}
+
+/// The Help menu: the bundled Help Book (generated from the docs by scripts/make-help-book.sh)
+/// and two links that open in the browser. The app makes no network calls and has no web view.
+struct HelpCommands: Commands {
+    /// The app's own book id (the preview app has a different one), from its Info.plist.
+    static var bookName: String { Bundle.main.object(forInfoDictionaryKey: "CFBundleHelpBookName") as? String ?? "com.aikongen.diskcleaner.help" }
+    private func open(anchor: String) { NSHelpManager.shared.openHelpAnchor(anchor, inBook: Self.bookName) }
+    private func browse(_ url: String) { if let url = URL(string: url) { NSWorkspace.shared.open(url) } }
+    var body: some Commands {
+        CommandGroup(replacing: .help) {
+            Button("Disk Cleaner Help") { NSApp.showHelp(nil) }.keyboardShortcut("?", modifiers: .command)
+            Button("What's new") { open(anchor: "whats-new") }
+            Button("Keyboard shortcuts") { open(anchor: "shortcuts") }
+            Divider()
+            Button("Report a problem") { browse("https://github.com/aikongen/disk-cleaner/issues/new") }
+            Button("Disk Cleaner on GitHub") { browse("https://github.com/aikongen/disk-cleaner") }
+        }
     }
 }
