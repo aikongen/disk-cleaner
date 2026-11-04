@@ -10,10 +10,12 @@ struct BrowseScreen: View {
             if ready {
                 BrowseList(model: model).transition(.fadeThrough)
             } else {
-                VStack(alignment: .leading, spacing: 10) {
-                    Text(model.scanning ? "Scan in progress" : "No scan yet").font(.system(size: 22, weight: .semibold))
-                    Text(model.scanning ? "Files appear here when the scan finishes." : "Choose a folder on Overview to read its sizes.").foregroundStyle(Paint.secondary)
-                }.padding(.vertical, 60).transition(.fadeThrough)
+                FirstRunPage(title: model.scanning ? "Scan in progress" : "Browse files",
+                             subtitle: model.scanning ? "Files appear here when the scan finishes." : "No scan yet. Choose a folder to browse it by size.") {
+                    if !model.scanning {
+                        ChooseFolderCard(model: model, helper: "Starts in \(chooserStartText(model)). Same folder chooser as Overview.")
+                    }
+                }.transition(.fadeThrough)
             }
         }
         .animation(CleanerMotion.fadeIn, value: ready)

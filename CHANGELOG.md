@@ -6,6 +6,7 @@ This file records user-visible changes. The format follows [Keep a Changelog](ht
 
 - Releases include a drag-to-install `.dmg` beside the zip.
 - README rewritten for people who download the app; build instructions moved to the maintainer guide.
+- Polished the first-run pages and Settings: one top-anchored 640 pt layout, free space shown on Overview, a "How an agent asks" Help link on Cleanups, and Settings without a back chevron.
 - Removed the Teal appearance option; the app has one violet atmosphere.
 
 ## 0.1.0 - 2026-11-04

@@ -16,11 +16,11 @@ Use this page to open the app, see what fills a folder, and, if you choose, move
 
 1. Open `Disk Cleaner Preview.app`. Its footer says it shows example data with no disk actions. Figures such as "126 GB Documents" are examples.
 2. To open one screen directly, quit it and start it with a scene: `open -n "Disk Cleaner Preview.app" --args --scene trash-review`. Setting `DISK_CLEANER_SCENE` does the same from a shell.
-3. Scenes: `overview`, `browse`, `browse-tree`, `empty`, `scanning`, `settings`, `trash-review`, `trash-outcome`, `cleanup-result`.
+3. Scenes: `overview`, `browse`, `browse-tree`, `empty`, `browse-empty`, `cleanups-empty`, `scanning`, `settings`, `trash-review`, `trash-outcome`, `cleanup-result`.
 
 ## Scan and browse
 
-1. Open `Disk Cleaner.app` and choose Choose Folder on the empty screen. The app scans only that folder. It does not follow symbolic links and stops after 100,000 entries, and it tells you the scope and how fresh the scan is.
+1. Open `Disk Cleaner.app` and choose **Choose folder…** on Overview, which also shows the free space on your startup disk, or on the empty Browse files page. The app scans only that folder. It does not follow symbolic links and stops after 100,000 entries, and it tells you the scope and how fresh the scan is.
 2. Cancel stops a running scan and keeps your previous saved result. Scan again repeats the current folder.
 3. Read **Overview**: whole-disk capacity beside the recorded sizes of the scanned folder. Scan totals are estimates, not space you could free.
 4. Open **Browse files**. Click a folder row to go inside. Use the back chevron or a breadcrumb to return; the row you came from stays in view. Browsing uses the saved scan and does not rescan.
@@ -38,7 +38,7 @@ Moving to the Trash does not free space until you empty it. Finder's Put Back is
 
 ## Settings
 
-Open Settings with the gear or Command-comma; it is a page in the same window, and Back or Esc returns. Choose whether to remember the last scan, and how many scans to keep: 5, 10 or 30.
+Open Settings with the gear or Command-comma; it is a page in the same window, and Esc or the gear returns you to the page you came from. Choose whether to open your last scan when the app starts, and how many scans to keep: 5, 10 or 30. Older scans leave the history list; your files are not touched.
 
 ## Cleanups
 

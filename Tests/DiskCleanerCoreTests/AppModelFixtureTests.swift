@@ -30,7 +30,7 @@ private func waitFor(_ condition: @MainActor () -> Bool) async {
     #expect(LaunchOptions.isFixture(arguments: ["app"], environment: ["DISK_CLEANER_DEMO": "1"], bundleDemoMode: false))
     #expect(LaunchOptions.isFixture(arguments: ["app"], environment: [:], bundleDemoMode: true))
     #expect(!LaunchOptions.isFixture(arguments: ["app"], environment: [:], bundleDemoMode: false))
-    #expect(Set(FixtureScene.allCases.map(\.rawValue)) == ["overview", "browse", "browse-tree", "empty", "scanning", "settings", "trash-review", "trash-outcome", "cleanup-result"])
+    #expect(Set(FixtureScene.allCases.map(\.rawValue)) == ["overview", "browse", "browse-tree", "empty", "browse-empty", "cleanups-empty", "scanning", "settings", "trash-review", "trash-outcome", "cleanup-result"])
 }
 
 @MainActor @Test func selectionStaysSeparateFromNavigation() throws {
@@ -239,6 +239,10 @@ private struct RefusingRecordingBackend: TrashBackend {
             #expect(model.selected?.path == FixtureData.installers)
         case .empty:
             #expect(!model.hasSnapshot); #expect(model.scanDate == nil)
+        case .browseEmpty:
+            #expect(!model.hasSnapshot); #expect(model.screen == .browse)
+        case .cleanupsEmpty:
+            #expect(!model.hasSnapshot); #expect(model.screen == .cleanups); #expect(model.job == nil)
         case .scanning:
             #expect(model.scanning); #expect(model.previousSnapshotAvailable)
             model.cancelScan(); #expect(!model.scanning)

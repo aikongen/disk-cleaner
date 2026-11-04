@@ -530,6 +530,10 @@ final class CleanerModel: ObservableObject {
             screen = .overview
             browser = nil; currentPath = nil; root = nil; scanDate = nil; comparisonDate = nil
             total = nil; available = nil; items = []; oldItems = []; coverageErrors = []; selectedItem = nil
+        case .browseEmpty, .cleanupsEmpty:
+            apply(.empty)
+            screen = scene == .browseEmpty ? .browse : .cleanups
+            jobs = []; selectedJob = nil
         case .scanning:
             screen = .overview
             scanning = true; scanRoot = URL(fileURLWithPath: FixtureData.root)

@@ -15,6 +15,8 @@ enum FixtureScene: String, CaseIterable, Sendable {
     case overview, browse
     case browseTree = "browse-tree"
     case empty, scanning, settings
+    case browseEmpty = "browse-empty"
+    case cleanupsEmpty = "cleanups-empty"
     case trashReview = "trash-review"
     case trashOutcome = "trash-outcome"
     case cleanupResult = "cleanup-result"
@@ -46,4 +48,19 @@ func dateText(_ date: Date?, time: Bool = false) -> String {
     formatter.locale = Locale(identifier: "en_GB")
     formatter.dateFormat = time ? "d MMM, HH:mm" : "d MMM yyyy"
     return formatter.string(from: date)
+}
+
+/// Free space on the boot volume for the no-scan Overview. The preview shows an example figure.
+struct BootVolumeFigure: Equatable, Sendable {
+    let name: String
+    let availableBytes: Int64
+    static let example = BootVolumeFigure(name: "Macintosh HD", availableBytes: 312_000_000_000)
+    var availableText: String { "\(Int((Double(availableBytes) / 1_000_000_000).rounded())) GB" }
+    static func measure() -> BootVolumeFigure? {
+        let url = URL(fileURLWithPath: "/")
+        guard let attributes = try? FileManager.default.attributesOfFileSystem(forPath: url.path),
+              let free = attributes[.systemFreeSize] as? NSNumber else { return nil }
+        let name = (try? url.resourceValues(forKeys: [.volumeNameKey]))?.volumeName ?? "this Mac"
+        return BootVolumeFigure(name: name, availableBytes: free.int64Value)
+    }
 }

@@ -191,10 +191,11 @@ struct PanelSurface: View {
 struct GhostStyle: ButtonStyle {
     @Environment(\.isEnabled) private var enabled
     var tint: Color = .white
+    var height: CGFloat = 36
     func makeBody(configuration: Configuration) -> some View {
         configuration.label.font(.system(size: 13, weight: .semibold))
             .foregroundStyle(tint.opacity(enabled ? 0.94 : 0.50))
-            .padding(.horizontal, 16).frame(height: 36)
+            .padding(.horizontal, 16).frame(height: height)
             .background(.white.opacity(configuration.isPressed && enabled ? 0.11 : 0), in: RoundedRectangle(cornerRadius: 7, style: .continuous))
             .animation(configuration.isPressed ? nil : CleanerMotion.release, value: configuration.isPressed)
             .overlay(RoundedRectangle(cornerRadius: 7, style: .continuous).strokeBorder(.white.opacity(enabled ? 0.30 : 0.18)))
@@ -371,3 +372,57 @@ enum FolderChooser {
         }
     }
 }
+
+/// The one layout of every no-scan page and Settings: a 640 pt column centred in the window,
+/// anchored to the top, a title, a one-line subtitle, then cards. Nothing is vertically centred.
+struct FirstRunPage<Content: View>: View {
+    let title: String
+    let subtitle: String
+    var subtitleSmall = false
+    @ViewBuilder var content: Content
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text(title).font(.system(size: 22, weight: .bold)).padding(.bottom, 6)
+            Text(subtitle).font(.system(size: subtitleSmall ? 12 : 14)).foregroundStyle(subtitleSmall ? Paint.secondary : Color(white: 0.78))
+                .fixedSize(horizontal: false, vertical: true).padding(.bottom, subtitleSmall ? 14 : 18)
+            VStack(alignment: .leading, spacing: 16) { content }
+        }
+        .frame(maxWidth: 640, alignment: .leading).frame(maxWidth: .infinity, alignment: .top)
+        // PersistentPage already adds 22 pt; this brings the title to 40 pt below the navigation.
+        .padding(.top, 18)
+    }
+}
+
+/// A plain card of the first-run pages.
+struct FirstRunCard<Content: View>: View {
+    @ViewBuilder var content: Content
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) { content }
+            .padding(.horizontal, 20).padding(.vertical, 18).frame(maxWidth: .infinity, alignment: .leading)
+            .background { PanelSurface(radius: 10) }
+    }
+}
+
+/// "Choose folder…" card shared by Overview and Browse files; both open the same chooser.
+struct ChooseFolderCard: View {
+    @ObservedObject var model: CleanerModel
+    let helper: String
+    var showsScanSettings = false
+    var body: some View {
+        FirstRunCard {
+            HStack(spacing: 10) {
+                Button("Choose folder…") { FolderChooser.choose { model.beginChosenScan($0) } }
+                    .buttonStyle(GhostStyle(height: 32)).disabled(model.scanControlsDisabledReason != nil)
+                Spacer(minLength: 8)
+                if showsScanSettings { Button("Scan settings") { model.openSettingsPage() }.buttonStyle(NeutralStyle(compact: true)) }
+            }
+            Text(helper).font(.system(size: 12.5)).foregroundStyle(Paint.secondary).fixedSize(horizontal: false, vertical: true).padding(.top, 10)
+            if let reason = model.scanControlsDisabledReason, !model.isFixture {
+                Text(reason).font(.system(size: 11)).foregroundStyle(Paint.secondary).padding(.top, 6)
+            }
+        }
+    }
+}
+
+/// Where the folder chooser starts, as shown in the helper lines.
+func chooserStartText(_ model: CleanerModel) -> String { model.isFixture ? "/Users/example" : NSHomeDirectory() }

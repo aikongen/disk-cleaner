@@ -62,20 +62,27 @@ struct OverviewScreen: View {
 
 struct EmptyInventory: View {
     @ObservedObject var model: CleanerModel
+    @State private var volume: BootVolumeFigure?
+    init(model: CleanerModel) {
+        self.model = model
+        _volume = State(initialValue: model.isFixture ? .example : BootVolumeFigure.measure())
+    }
     var body: some View {
-        VStack(spacing: 14) {
-            Text("No scan yet").font(.system(size: 22, weight: .semibold))
-            Text("Choose a folder to read its sizes. Choosing a folder only reads it; nothing is changed or removed.")
-                .foregroundStyle(Paint.secondary).multilineTextAlignment(.center).frame(maxWidth: 380)
-            Button("Choose Folder…") { FolderChooser.choose { model.beginChosenScan($0) } }
-                .buttonStyle(GhostStyle()).disabled(model.scanControlsDisabledReason != nil)
-            if let reason = model.scanControlsDisabledReason { Text(reason).font(.system(size: 11)).foregroundStyle(Paint.secondary) }
-            HStack(spacing: 8) {
-                Text("Capacity and size figures appear after a scan finishes.").font(.system(size: 12)).foregroundStyle(Paint.secondary)
-                Button("Scan settings") { model.openSettingsPage() }.buttonStyle(NeutralStyle(compact: true))
+        FirstRunPage(title: "Overview", subtitle: "Choose a folder to see what takes up space.") {
+            if let volume {
+                FirstRunCard {
+                    HStack(alignment: .firstTextBaseline, spacing: 8) {
+                        Text(volume.availableText).font(.system(size: 44, weight: .bold)).monospacedDigit()
+                        Text("free on \(volume.name)").font(.system(size: 16, weight: .medium)).foregroundStyle(Paint.secondary)
+                    }
+                    Text("Measured now").font(.system(size: 12)).foregroundStyle(Paint.secondary).padding(.top, 6)
+                }
             }
+            ChooseFolderCard(model: model, helper: "Starts in \(chooserStartText(model)). Disk Cleaner only reads sizes. Nothing moves until you tick items and confirm.", showsScanSettings: true)
         }
-        .frame(maxWidth: .infinity).padding(.top, 170)
+        .onChange(of: model.screen) { _, screen in
+            if screen == .overview, !model.isFixture { volume = BootVolumeFigure.measure() }
+        }
     }
 }
 

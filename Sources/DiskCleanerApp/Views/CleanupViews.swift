@@ -1,4 +1,5 @@
 import SwiftUI
+import AppKit
 import DiskCleanerCore
 
 /// Cleanups. The request header, card outlines and row titles hold still; switching
@@ -17,10 +18,17 @@ struct JobsScreen: View {
             }
             .animation(CleanerMotion.layout(CleanerMotion.navigate, reduceMotion: reduceMotion), value: job.id)
         } else {
-            VStack(alignment: .leading, spacing: 12) {
-                Text("No cleanup requests yet").font(.system(size: 22, weight: .semibold))
-                Text("Requests and their outcomes will appear here. No cleanup rule is enabled.").foregroundStyle(Paint.secondary)
-            }.frame(maxWidth: .infinity, alignment: .leading).padding(.vertical, 60)
+            FirstRunPage(title: "Cleanups", subtitle: "When an AI agent asks for free space, its request and the answer show up here.") {
+                FirstRunCard {
+                    HStack(alignment: .firstTextBaseline, spacing: 9) {
+                        Circle().fill(Paint.warning).frame(width: 8, height: 8).alignmentGuide(.firstTextBaseline) { $0[.bottom] - 1 }
+                        Text("No cleanup types are switched on yet, so every request is answered \u{201C}Can\u{2019}t free enough\u{201D} and nothing is moved.")
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+                // Shown only when the bundle declares a Help Book, so a preview never has a dead link.
+                if Bundle.main.object(forInfoDictionaryKey: "CFBundleHelpBookName") is String { AgentAsksHelpLink() }
+            }
         }
     }
 }
@@ -224,5 +232,23 @@ struct CleanupMeasurementNote: View {
                     .font(.system(size: 12)).foregroundStyle(Color(white: 0.82)).padding(16).frame(maxWidth: .infinity, minHeight: 210, alignment: .topLeading)
             }
         }
+    }
+}
+
+/// "How an agent asks" opens the Help Book page; explanations live in Apple Help. A missing
+/// book does nothing but log.
+struct AgentAsksHelpLink: View {
+    var body: some View {
+        Button {
+            guard let book = Bundle.main.object(forInfoDictionaryKey: "CFBundleHelpBookName") as? String else {
+                NSLog("Disk Cleaner: no Help Book is installed; \"agents\" anchor not opened")
+                return
+            }
+            NSHelpManager.shared.openHelpAnchor("agents", inBook: book)
+        } label: {
+            Text("How an agent asks").font(.system(size: 13, weight: .medium)).underline()
+                .foregroundStyle(Color(white: 0.86))
+                .frame(minHeight: 28).contentShape(Rectangle())
+        }.buttonStyle(WholeRowStyle()).padding(.leading, 2)
     }
 }
