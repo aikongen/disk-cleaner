@@ -17,6 +17,8 @@ swift test                     # fixture tests in temporary folders
 scripts/build-and-package.sh   # tests, release build, two ad-hoc signed bundles in artifacts/
 ```
 
+`scripts/make-icon-assets.sh <source-1024.png>` regenerates every icon-derived asset (icns, Xcode AppIcon catalog, `assets/icon.png`, README hero) from one 1024 px PNG.
+
 The packaging script refuses an output folder outside the repository, replaces only its two named bundles, and writes source and executable SHA-256 manifests plus `BUILD-INFO.txt` beside them. The bundles are development artifacts, not Developer ID signed or notarized distributions.
 
 `xcode/DiskCleanerHost/DiskCleanerHost.xcodeproj` builds the same `Sources/` and `Tests/` through Xcode, so Apple's Xcode build, test and preview tools can work on them. Its file references are relative to the repository root. The `DiskCleaner` scheme builds the Core framework, the normal app, the CLI and the tests; `DiskCleanerFunctionalPreview` builds the example-data app. The Xcode app target does not embed `disk-cleanerctl`; the packaging script does. When you add or remove a source file, add or remove it in the Xcode project too.

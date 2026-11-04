@@ -33,6 +33,7 @@ write_info_plist() {
 <dict>
   <key>CFBundleDevelopmentRegion</key><string>en</string>
   <key>CFBundleExecutable</key><string>DiskCleanerApp</string>
+  <key>CFBundleIconFile</key><string>DiskCleaner</string>
   <key>CFBundleIdentifier</key><string>$bundle_id</string>
   <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
   <key>CFBundleName</key><string>$bundle_name</string>
@@ -55,10 +56,11 @@ package_app() {
   local stage_dir app_dir demo_keys
   stage_dir="$(mktemp -d "$DIST_DIR/.package.XXXXXX")"
   app_dir="$stage_dir/$app_name.app"
-  mkdir -p "$app_dir/Contents/MacOS"
+  mkdir -p "$app_dir/Contents/MacOS" "$app_dir/Contents/Resources"
 
   install -m 755 "$BIN_DIR/DiskCleanerApp" "$app_dir/Contents/MacOS/DiskCleanerApp"
   install -m 755 "$BIN_DIR/disk-cleanerctl" "$app_dir/Contents/MacOS/disk-cleanerctl"
+  install -m 644 "$PACKAGE_ROOT/assets/icon/DiskCleaner.icns" "$app_dir/Contents/Resources/DiskCleaner.icns"
   printf 'APPL????' > "$app_dir/Contents/PkgInfo"
 
   demo_keys=""
@@ -82,7 +84,7 @@ package_app "Disk Cleaner Preview" "com.aikongen.diskcleaner.preview" true
 
 (
   cd "$PACKAGE_ROOT"
-  find CONTRACT.md Package.swift Sources Tests scripts/build-and-package.sh -type f -print | LC_ALL=C sort | while IFS= read -r file; do
+  find CONTRACT.md Package.swift Sources Tests scripts/build-and-package.sh assets/icon/DiskCleaner.icns -type f -print | LC_ALL=C sort | while IFS= read -r file; do
     shasum -a 256 "$file"
   done
 ) > "$DIST_DIR/SOURCE-MANIFEST.sha256"

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1C0DE0000000000000000B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C0DE0000000000000000A1 /* Assets.xcassets */; };
+		A1C0DE0000000000000000B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C0DE0000000000000000A1 /* Assets.xcassets */; };
 		EF5314D05739AD0BEFF0A1EA /* MotionFramesSettingsExitTab4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F251EB5722D56CC453779 /* MotionFramesSettingsExitTab4.swift */; };
 		636DAE0C2B9D9275C83568F0 /* MotionFramesSettingsExitTab4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F251EB5722D56CC453779 /* MotionFramesSettingsExitTab4.swift */; };
 		A9FADC661C28F0F014BCEC16 /* MotionFramesSettingsExitTab3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2722D963744474E4B9D4D5A /* MotionFramesSettingsExitTab3.swift */; };
@@ -260,6 +262,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A1C0DE0000000000000000A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		216F251EB5722D56CC453779 /* MotionFramesSettingsExitTab4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesSettingsExitTab4.swift"; sourceTree = "<group>"; };
 		D2722D963744474E4B9D4D5A /* MotionFramesSettingsExitTab3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesSettingsExitTab3.swift"; sourceTree = "<group>"; };
 		4B0F3AC9C05BBB68AE9A353C /* MotionFramesSettingsExitTab2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MotionFramesSettingsExitTab2.swift"; sourceTree = "<group>"; };
@@ -427,6 +430,7 @@
 		0D6E4079E36703EBD37C0072 = {
 			isa = PBXGroup;
 			children = (
+				A1C0DE0000000000000000A1 /* Assets.xcassets */,
 				0A3E27B8CA818264D75C8D81 /* Products */,
 				3152FA71F4DA052D4F267FBF /* DiskCleanerCore */,
 				68D66C1CD2D644A5E6D20237 /* DiskCleanerApp */,
@@ -612,6 +616,7 @@
 				5FE1A741A795B038ECEEAA40 /* Sources */,
 				457D9E1009B281B5E68915CB /* Frameworks */,
 				275C6E3FA4AF2ADDC9B81D4B /* Embed Frameworks */,
+				A1C0DE0000000000000000C1 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -630,6 +635,7 @@
 				CA7695C75E776178B1A4CE02 /* Sources */,
 				1BA46615DA7A71201FABD5BB /* Frameworks */,
 				7B5F09F33EA9198C2AB15258 /* Embed Frameworks */,
+				A1C0DE0000000000000000C2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -688,6 +694,25 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1C0DE0000000000000000C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1C0DE0000000000000000B1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1C0DE0000000000000000C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1C0DE0000000000000000B2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		210104056D67B993010C2EA8 /* Sources */ = {
@@ -1099,7 +1124,7 @@
 		6699A61BC144BC7068789300 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGNING_ALLOWED = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -1136,7 +1161,7 @@
 		058E4ADC624E88F447EB7720 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGNING_ALLOWED = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -1234,7 +1259,7 @@
 		9C42E75C6504B8785CEFFF65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGNING_ALLOWED = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -1271,7 +1296,7 @@
 		0AABCB188EBB643CB71DBFDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGNING_ALLOWED = YES;
 				CODE_SIGN_IDENTITY = "-";

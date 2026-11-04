@@ -8,6 +8,7 @@ This file records user-visible changes. The format follows [Keep a Changelog](ht
 
 ### Added
 
+- Product icon.
 - First public source. Inspect a folder you choose and keep the scan.
 - Browse the saved scan without rescanning, with breadcrumbs, search and sort.
 - Review exact paths and move only the items you checked to the Trash, with an outcome for each item.
