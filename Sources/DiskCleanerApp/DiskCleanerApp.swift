@@ -15,6 +15,10 @@ struct DiskCleanerApplication: App {
         .defaultSize(width: 1200, height: 840)
         .windowStyle(.hiddenTitleBar)
         .commands {
+            // About is one reused panel, not a window scene.
+            CommandGroup(replacing: .appInfo) {
+                Button("About Disk Cleaner") { AboutPanelController.shared.show() }
+            }
             // ⌘, opens the Settings page in the main window; there is no Settings window.
             CommandGroup(replacing: .appSettings) {
                 Button("Settings…") { model.openSettingsPage() }.keyboardShortcut(",", modifiers: .command)
@@ -78,6 +82,10 @@ struct CleanerWindow: View {
         .background { WindowAtmosphere() }
         .foregroundStyle(Color(white: 0.94)).font(.system(size: 13))
         .task {
+            // Fixture-only: --open-about shows the About panel at launch for captures.
+            if model.isFixture && ProcessInfo.processInfo.arguments.contains("--open-about") {
+                try? await Task.sleep(for: .milliseconds(500)); AboutPanelController.shared.show()
+            }
             guard !model.isFixture else { return }
             while !Task.isCancelled {
                 await model.refreshJobs()

@@ -70,6 +70,10 @@ package_app() {
   install -m 755 "$BIN_DIR/disk-cleanerctl" "$app_dir/Contents/MacOS/disk-cleanerctl"
   install -m 644 "$PACKAGE_ROOT/assets/icon/DiskCleaner.icns" "$app_dir/Contents/Resources/DiskCleaner.icns"
   cp -R "$DIST_DIR/.help-$help_dir/DiskCleaner.help" "$app_dir/Contents/Resources/DiskCleaner.help"
+  # About panel resources: the What's new source and the dark-pinned made-with-love mark.
+  install -m 644 "$PACKAGE_ROOT/CHANGELOG.md" "$app_dir/Contents/Resources/CHANGELOG.md"
+  install -m 644 "$PACKAGE_ROOT/assets/made-with-love-aikongen-dark.svg" "$app_dir/Contents/Resources/made-with-love-aikongen-dark.svg"
+  install -m 644 "$PACKAGE_ROOT/assets/icon/icon-1024.png" "$app_dir/Contents/Resources/AboutIcon.png"
   printf 'APPL????' > "$app_dir/Contents/PkgInfo"
 
   demo_keys=""
@@ -112,7 +116,7 @@ rm -rf "$DMG_STAGE"
 
 (
   cd "$PACKAGE_ROOT"
-  find CONTRACT.md Package.swift README.md CHANGELOG.md docs Sources Tests scripts/build-and-package.sh scripts/make-help-book.sh scripts/help-book assets/icon/DiskCleaner.icns -type f ! -name .DS_Store -print | LC_ALL=C sort | while IFS= read -r file; do
+  find CONTRACT.md Package.swift README.md CHANGELOG.md docs Sources Tests scripts/build-and-package.sh scripts/make-help-book.sh scripts/help-book assets/icon/DiskCleaner.icns assets/icon/icon-1024.png assets/made-with-love-aikongen-dark.svg -type f ! -name .DS_Store -print | LC_ALL=C sort | while IFS= read -r file; do
     shasum -a 256 "$file"
   done
 ) > "$DIST_DIR/SOURCE-MANIFEST.sha256"

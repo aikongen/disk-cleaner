@@ -358,3 +358,34 @@ private struct RefusingRecordingBackend: TrashBackend {
     model.back()
     #expect(!model.folderArrivesWithPage)
 }
+
+#if canImport(DiskCleanerApp)
+@Suite struct AboutWhatsNewTests {
+    private let log = """
+    # Changelog
+
+    ## Unreleased
+
+    - Unreleased item.
+
+    ## 0.2.0 - 2026-12-01
+
+    ### Added
+
+    - First `0.2.0` item.
+    - Second item.
+
+    ## 0.1.0 - 2026-11-04
+
+    - Only 0.1.0 item.
+    """
+    @Test func picksTheFirstBulletOfTheMatchingVersion() {
+        #expect(AboutWhatsNew.line(for: "0.2.0", in: log) == "First 0.2.0 item.")
+        #expect(AboutWhatsNew.line(for: "0.1.0", in: log) == "Only 0.1.0 item.")
+    }
+    @Test func hidesTheLineWhenTheVersionHasNoSection() {
+        #expect(AboutWhatsNew.line(for: "0.3.0", in: log) == nil)
+        #expect(AboutWhatsNew.line(for: "0.2", in: log) == nil)
+    }
+}
+#endif
