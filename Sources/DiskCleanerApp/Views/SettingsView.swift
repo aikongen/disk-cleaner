@@ -14,9 +14,8 @@ struct SettingsPage: View {
                 }
                 Rule().padding(.horizontal, 16)
                 SettingRow(title: "Scans to keep") {
-                    Picker("Scans to keep", selection: preference(\.retention)) {
-                        Text("5").tag(SnapshotRetention.five); Text("10").tag(SnapshotRetention.ten); Text("30").tag(SnapshotRetention.thirty)
-                    }.pickerStyle(.segmented).labelsHidden().frame(width: 140).disabled(model.retentionLocked)
+                    SegmentedChoice(options: SnapshotRetention.allCases.map { ($0, "\($0.rawValue)") }, selection: preference(\.retention))
+                        .frame(width: 140).disabled(model.retentionLocked)
                         .help(model.retentionLocked ? "Available when no scan or Trash review is running" : "")
                 }
             }
@@ -47,5 +46,41 @@ struct SettingRow<Control: View>: View {
             Spacer()
             control
         }.padding(.horizontal, 16).frame(minHeight: 44)
+    }
+}
+
+/// Small segmented control whose highlight slides on the selection spring, like the nav and
+/// Browse rows. Each whole segment is the hit target (30 pt tall) with a pointing cursor.
+struct SegmentedChoice<Value: Hashable>: View {
+    let options: [(Value, String)]
+    @Binding var selection: Value
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.isEnabled) private var enabled
+    @Namespace private var highlight
+
+    var body: some View {
+        HStack(spacing: 0) {
+            ForEach(options.indices, id: \.self) { i in
+                let value = options[i].0
+                Button { selection = value } label: {
+                    Text(options[i].1).font(.system(size: 13, weight: .medium))
+                        .foregroundStyle(.white.opacity(selection == value ? 0.96 : 0.76))
+                        .frame(maxWidth: .infinity).frame(height: 30)
+                        .contentShape(Rectangle())
+                        .background {
+                            if selection == value {
+                                RoundedRectangle(cornerRadius: 6, style: .continuous)
+                                    .fill(.white.opacity(0.14))
+                                    .overlay(RoundedRectangle(cornerRadius: 6, style: .continuous).strokeBorder(.white.opacity(0.16)))
+                                    .matchedGeometryEffect(id: "segment", in: highlight)
+                            }
+                        }
+                }.buttonStyle(.plain).pointingCursor()
+            }
+        }
+        .padding(2).background(.black.opacity(0.22), in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: 8, style: .continuous).strokeBorder(.white.opacity(0.08)))
+        .animation(CleanerMotion.layout(CleanerMotion.selection, reduceMotion: reduceMotion), value: selection)
+        .opacity(enabled ? 1 : 0.5)
     }
 }
