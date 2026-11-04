@@ -23,12 +23,19 @@ mkdir -p "$ICON" "$SET" "$CAT"
 [[ "$(cd "$(dirname "$SRC")" && pwd)/$(basename "$SRC")" == "$ICON/icon-1024.png" ]] || cp "$SRC" "$ICON/icon-1024.png"
 rm -f "$SET"/*.png "$CAT"/*.png
 
-mk() { sips -z "$1" "$1" "$ICON/icon-1024.png" --out "$2" >/dev/null; }
+# Masked master: macOS icon grid, 824 px shape centred on a 1024 canvas, corner radius 185.4, soft shadow.
+TMP="$(mktemp -d)"; trap 'rm -rf "$TMP"' EXIT
+magick "$ICON/icon-1024.png" -resize 824x824 \
+  \( -size 824x824 xc:black -fill white -draw "roundrectangle 0,0 823,823 185.4,185.4" \) \
+  -alpha off -compose CopyOpacity -composite "$TMP/shape.png"
+magick "$TMP/shape.png" \( +clone -background black -shadow 35x10+0+10 \) -reverse \
+  -background none -layers merge +repage -gravity center -extent 1024x1024 "$TMP/masked-1024.png"
+mk() { sips -z "$1" "$1" "$TMP/masked-1024.png" --out "$2" >/dev/null; }
 mk 16 "$SET/icon_16x16.png";   mk 32 "$SET/icon_16x16@2x.png"
 mk 32 "$SET/icon_32x32.png";   mk 64 "$SET/icon_32x32@2x.png"
 mk 128 "$SET/icon_128x128.png"; mk 256 "$SET/icon_128x128@2x.png"
 mk 256 "$SET/icon_256x256.png"; mk 512 "$SET/icon_256x256@2x.png"
-mk 512 "$SET/icon_512x512.png"; cp "$ICON/icon-1024.png" "$SET/icon_512x512@2x.png"
+mk 512 "$SET/icon_512x512.png"; cp "$TMP/masked-1024.png" "$SET/icon_512x512@2x.png"
 iconutil -c icns "$SET" -o "$ICON/DiskCleaner.icns"
 file "$ICON/DiskCleaner.icns" | grep -q "Mac OS X icon"
 mk 256 "$ROOT/assets/icon.png"
@@ -45,7 +52,6 @@ PY
 
 # README hero: 1600x600, dark violet canvas, icon with a soft glow, title, promise, capacity bar.
 W=1600; H=600; S=380; IX=150; IY=110
-TMP="$(mktemp -d)"; trap 'rm -rf "$TMP"' EXIT
 magick -size ${W}x${H} xc:'#17122B' \
   \( -size ${W}x${H} xc:none -fill 'rgba(124,92,230,0.55)' -draw "circle $((IX+S/2)),$((IY+S/2)) $((IX+S/2+S/2+10)),$((IY+S/2))" -blur 0x70 \) -compose over -composite \
   \( "$ICON/icon-1024.png" -resize ${S}x${S} \( -size ${S}x${S} xc:black -fill white -draw "roundrectangle 0,0 $((S-1)),$((S-1)) 86,86" \) -alpha off -compose CopyOpacity -composite \) -geometry +${IX}+${IY} -compose over -composite \
