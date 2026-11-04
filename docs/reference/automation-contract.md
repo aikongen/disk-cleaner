@@ -26,7 +26,7 @@ These commands match the current argument parser. Requests write real product st
 
 ```sh
 # Use the normal app's embedded helper.
-cli="$DISK_CLEANER_APP/Contents/MacOS/disk-cleanerctl"  # path to Disk Cleaner Visual Repair.app, for example .../delivery-06/Disk Cleaner.app
+cli="$DISK_CLEANER_APP/Contents/MacOS/disk-cleanerctl"  # path to Disk Cleaner.app, built by scripts/build-and-package.sh (artifacts/Disk Cleaner.app)
 "$cli" request 24000000000 'my-work-unique-request-key'
 # Read the returned id, then substitute that UUID below.
 "$cli" status '<job-id>'

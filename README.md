@@ -24,6 +24,7 @@ Most disk tools either draw you a chart or clean "junk" on their own terms. Disk
       <img src="assets/screenshot-overview.png" alt="Overview: disk capacity beside the sizes of the scanned folder">
       <br><b>See what fills your disk</b>
       <br>Capacity and the sizes of the folder you scanned, side by side. Estimates, sizes and measured changes stay separate, and unknown stays unknown.
+      <br>The Make room for work card and the recent cleanup row are a concept preview with example data; no cleanup category is enabled yet, and the real app shows a disabled Clean up button.
     </td>
     <td width="50%" valign="top">
       <img src="assets/screenshot-browse.png" alt="Browse files: a folder opened from the saved scan, with one item checked">

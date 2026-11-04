@@ -269,7 +269,7 @@ final class CleanerModel: ObservableObject {
     /// From Overview: open Browse at the item's folder with the item inspected.
     func reveal(inBrowse path: String) {
         show(.browse)
-        // During a review the owner lands on the open review; nothing moves under it.
+        // During a review the user lands on the open review; nothing moves under it.
         guard listNavigable, let browser, let entry = browser.entry(at: path) else { return }
         if let parent = browser.parent(of: entry.path) ?? Optional(browser.rootPath) { navigate(parent) }
         // The page fade is the only spatial cue for a jump from another page.

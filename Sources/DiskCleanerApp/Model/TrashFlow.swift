@@ -132,7 +132,7 @@ final class FixtureTrashFlow: TrashFlow, @unchecked Sendable {
 }
 
 /// Normal app only. ManualTrashService needs a backend when it is created, but no
-/// real backend exists until the owner presses Move to Trash on the review screen.
+/// real backend exists until the user presses Move to Trash on the review screen.
 /// Until then every move is refused without validating or touching a path.
 final class ConfirmGatedTrashBackend: TrashBackend, @unchecked Sendable {
     struct NotConfirmed: Error, LocalizedError { var errorDescription: String? { "Move to Trash was not confirmed. Nothing was moved." } }

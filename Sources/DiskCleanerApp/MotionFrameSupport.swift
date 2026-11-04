@@ -109,7 +109,7 @@ extension MotionFramePreview {
         var frame = MotionFrameOverride(); frame.selection = (from, MotionClock.spring(0.25, ms))
         return MotionFramePreview(title: "Inspect a file in Downloads", ms: ms, model: model, frame: frame)
     }
-    /// Settings was opened from Overview; the owner leaves it by clicking Browse files.
+    /// Settings was opened from Overview; the user leaves it by clicking Browse files.
     /// The Settings page fades out, Browse fades in, and the tab highlight fades in at
     /// Browse files without sliding.
     @MainActor static func settingsExitViaTab(_ i: Int) -> MotionFramePreview {

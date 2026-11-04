@@ -6,7 +6,7 @@ enum DiskCleanerAppearance {
     static let greenTop = Color(red: 0.12, green: 0.19, blue: 0.22)
     static let greenGlow1 = Color(red: 0.12, green: 0.36, blue: 0.39)
     static let greenGlow2 = Color(red: 0.18, green: 0.31, blue: 0.48)
-    // Chief S atmosphere: ground #0B0A10, RGB 83/56/158 and 44/28/95.
+    // Violet atmosphere: ground #0B0A10, RGB 83/56/158 and 44/28/95.
     static let violetGround = Color(red: 11.0 / 255, green: 10.0 / 255, blue: 16.0 / 255)
     static let violetGlow1 = Color(red: 83.0 / 255, green: 56.0 / 255, blue: 158.0 / 255)
     static let violetGlow2 = Color(red: 44.0 / 255, green: 28.0 / 255, blue: 95.0 / 255)
