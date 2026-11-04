@@ -4,6 +4,10 @@ This file records user-visible changes. The format follows [Keep a Changelog](ht
 
 ## Unreleased
 
+## 0.1.1 - 2026-11-04
+
+### Changed
+
 - Help menu opens a searchable Help Book generated from the docs, with What's new and Keyboard shortcuts.
 - Added an About panel from the app menu: icon with a one-time lift, version, what's new, and links to releases, source, problems and the licence.
 - Releases include a drag-to-install `.dmg` beside the zip.

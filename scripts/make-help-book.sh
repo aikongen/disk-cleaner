@@ -6,7 +6,7 @@ set -euo pipefail
 
 PACKAGE_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 OUT_PARENT="${1:-$PACKAGE_ROOT/artifacts}"
-VERSION="${DISK_CLEANER_VERSION:-0.1.0}"
+VERSION="${DISK_CLEANER_VERSION:-0.1.1}"
 BOOK="$OUT_PARENT/DiskCleaner.help"
 LPROJ="$BOOK/Contents/Resources/English.lproj"
 BOOK_ID="${2:-com.aikongen.diskcleaner.help}"
@@ -28,7 +28,7 @@ cat > "$BOOK/Contents/Info.plist" <<PLIST
   <key>CFBundlePackageType</key><string>BNDL</string>
   <key>CFBundleShortVersionString</key><string>$VERSION</string>
   <key>CFBundleSignature</key><string>hbwr</string>
-  <key>CFBundleVersion</key><string>1</string>
+  <key>CFBundleVersion</key><string>2</string>
   <key>HPDBookAccessPath</key><string>index.html</string>
   <key>HPDBookIndexPath</key><string>DiskCleaner.helpindex</string>
   <key>HPDBookTitle</key><string>Disk Cleaner Help</string>
