@@ -6,6 +6,23 @@ import Darwin
 import Glibc
 #endif
 
+private struct WaitTimeout: LocalizedError {
+    let raw: String
+    let id: UUID
+    var errorDescription: String? { "Timed out after \(raw) seconds waiting for job \(id.uuidString)" }
+}
+
+/// Matches ^[0-9]+(\.[0-9]+)?$ using ASCII digits only.
+private func isPlainDecimal(_ text: String) -> Bool {
+    let parts = text.utf8.split(separator: UInt8(ascii: "."), maxSplits: 2, omittingEmptySubsequences: false)
+    guard parts.count == 1 || parts.count == 2 else { return false }
+    for part in parts {
+        if part.isEmpty { return false }
+        for byte in part where byte < UInt8(ascii: "0") || byte > UInt8(ascii: "9") { return false }
+    }
+    return true
+}
+
 @main struct CLI {
     static func main() async {
         do { try await run() } catch {
@@ -60,13 +77,30 @@ import Glibc
         case "worker":
             guard args.count == 2, let id = UUID(uuidString: args[1]) else { throw CoreError.invalidRequest }
             job = try await store.run(id: id)
-        case "status", "wait":
+        case "status":
             guard args.count == 2, let id = UUID(uuidString: args[1]) else { throw CoreError.invalidRequest }
+            job = try await store.get(id: id)
+        case "wait":
+            // All argument parsing happens before the job is read.
+            guard args.count == 2 || args.count == 4, let id = UUID(uuidString: args[1]) else { throw CoreError.invalidRequest }
+            var rawTimeout: String?
+            var seconds = 0.0
+            if args.count == 4 {
+                let raw = args[3]
+                guard args[2] == "--timeout", isPlainDecimal(raw), let value = Double(raw), value.isFinite, value > 0 else { throw CoreError.invalidRequest }
+                rawTimeout = raw; seconds = value
+            }
+            let clock = ContinuousClock()
+            let deadline: ContinuousClock.Instant? = rawTimeout == nil ? nil : clock.now + .seconds(min(seconds, 1_000_000_000))
             var current = try await store.get(id: id)
-            if command == "wait" {
-                while current.status == .queued || current.status == .running {
-                    try await Task.sleep(for: .milliseconds(200)); current = try await store.get(id: id)
+            while current.status == .queued || current.status == .running {
+                var pause = Duration.milliseconds(200)
+                if let deadline {
+                    let now = clock.now
+                    if now >= deadline { throw WaitTimeout(raw: rawTimeout ?? "", id: id) }
+                    pause = min(pause, deadline - now)
                 }
+                try await Task.sleep(for: pause); current = try await store.get(id: id)
             }
             job = current
         default: throw CoreError.invalidRequest
