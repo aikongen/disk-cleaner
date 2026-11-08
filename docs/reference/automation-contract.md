@@ -12,7 +12,7 @@ Use this page when an agent or script needs to request available disk space thro
 | --- | --- |
 | `disk-cleanerctl request <target-available-bytes> <idempotency-key>` | Persist a queued job before acknowledging it; launch the same executable as a child capacity-check worker; emit the acknowledged job as one JSON line. The worker may already have finished when the caller reads this queued acknowledgement. |
 | `disk-cleanerctl status <job-id>` | Emit the saved job. A still-queued request older than 60 seconds is conservatively changed to `interrupted` during retrieval; the worker cannot subsequently execute that interrupted job. |
-| `disk-cleanerctl wait <job-id>` | Poll the saved job every 200 ms while queued/running, then emit the terminal job. No caller-configurable timeout or cancellation contract is implemented. |
+| `disk-cleanerctl wait <job-id> [--timeout <seconds>]` | Poll the saved job every 200 ms while queued/running, then emit the terminal job. Without `--timeout` there is no limit. `--timeout` takes a decimal greater than 0 (for example `5` or `0.5`) and comes after the job id. If the job is still queued/running after that time, the command exits 1, writes the stderr JSON error `Timed out after <seconds> seconds waiting for job <job-id>` and nothing to stdout; the job is not changed. There is a caller timeout (`--timeout`) and no cancellation. |
 | `worker <job-id>` | Internal child-process entry point; not the client API. It is not a security boundary against another process running as the same user. |
 | `fixture-capability` | DEBUG-only test preflight; emits `disk-cleaner-debug-fixture-v1` as plain text without resolving a state directory. It is not available in release builds. |
 
@@ -31,9 +31,10 @@ cli="$DISK_CLEANER_APP/Contents/MacOS/disk-cleanerctl"  # path to Disk Cleaner.a
 # Read the returned id, then substitute that UUID below.
 "$cli" status '<job-id>'
 "$cli" wait '<job-id>'
+"$cli" wait '<job-id>' --timeout 30
 ```
 
-A process exit of **0 means the command returned a job successfully**, including a job whose status is `insufficient`, `failed` or `interrupted`. It does not mean the capacity goal was met. Decode `status`, inspect the target/measurements and act on the result. Exit 1 indicates argument, lookup, persistence, idempotency, worker-launch or other command failure; stderr contains one JSON object with an `error` string. Error messages are human descriptions, not versioned machine error codes.
+A process exit of **0 means the command returned a job successfully**, including a job whose status is `insufficient`, `failed` or `interrupted`. It does not mean the capacity goal was met. Decode `status`, inspect the target/measurements and act on the result. Exit 1 indicates argument, lookup, persistence, idempotency, worker-launch, `wait --timeout` timeout or other command failure; stderr contains one JSON object with an `error` string. Error messages are human descriptions, not versioned machine error codes.
 
 ## JSON fields
 
@@ -65,7 +66,7 @@ Capacity is volatile after any measurement. Resume the original work only when t
 
 Normal state is `~/Library/Application Support/DiskCleaner/jobs.json`. The ledger uses shared/exclusive process locks, atomic file replacement and file/directory fsync. A write failure cannot return successful acceptance. Corrupt JSON fails without replacement. These mechanisms and fixtures are useful evidence, not a proof of power-loss or actual ENOSPC resilience.
 
-No history retention/byte budget, schema migration, event delivery, cancellation endpoint, operation deadline or full-disk reserve is implemented. Do not silently add one while treating it as a documented current capability. No transport rewrite is necessary simply because polling is the present contract.
+No history retention/byte budget, schema migration, event delivery, cancellation endpoint, server-side operation deadline or full-disk reserve is implemented. Do not silently add one while treating it as a documented current capability. No transport rewrite is necessary simply because polling is the present contract.
 
 DEBUG CLI fixtures require both `DISK_CLEANER_FIXTURE_MODE=1` and an absolute `DISK_CLEANER_FIXTURE_DIR` containing `.disk-cleaner-fixture`. The capability preflight must succeed before fixture use. Release builds ignore these variables and resolve normal Application Support. The shipped preview app's visual demo flag does not alter CLI behavior. Existing integration tests intentionally use the same-build DEBUG helper and temporary directories.
 
