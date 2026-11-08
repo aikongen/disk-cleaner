@@ -3,7 +3,7 @@ set -euo pipefail
 
 PACKAGE_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DIST_DIR="${1:-$PACKAGE_ROOT/artifacts}"
-VERSION="${DISK_CLEANER_VERSION:-0.1.1}"
+VERSION="${DISK_CLEANER_VERSION:-0.1.2}"
 
 case "$(uname -s)" in
   Darwin) ;;
@@ -47,7 +47,7 @@ write_info_plist() {
   <key>CFBundleName</key><string>$bundle_name</string>
   <key>CFBundlePackageType</key><string>APPL</string>
   <key>CFBundleShortVersionString</key><string>$VERSION</string>
-  <key>CFBundleVersion</key><string>2</string>
+  <key>CFBundleVersion</key><string>3</string>
   <key>LSMinimumSystemVersion</key><string>14.0</string>
   <key>NSHighResolutionCapable</key><true/>
   <key>LSApplicationCategoryType</key><string>public.app-category.utilities</string>

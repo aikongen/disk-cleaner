@@ -4,6 +4,8 @@ This file records user-visible changes. The format follows [Keep a Changelog](ht
 
 ## Unreleased
 
+## 0.1.2 - 2026-11-08
+
 ### Added
 
 - disk-cleanerctl wait accepts --timeout <seconds>; on timeout it exits 1 with a JSON error on stderr and leaves the job unchanged.
